@@ -1,4 +1,4 @@
-## Dropout‑Consistency Training
+## Dropout‑Consistency Training
 
 Turney (1995) argues that a good learner should discover *essentially the same concept* when it is trained on two **near‑identical** samples drawn from the same distribution. Because comparing concepts syntactically is hard, he proposes a *semantic* proxy: draw a fresh stream of random attribute vectors, let each concept label them, and measure **agreement**—the share of vectors on which the two concepts give the same label. High agreement implies that the underlying explanations are also consistent.
 
@@ -26,10 +26,10 @@ def dropout_consistency_loss(model, x, y, n_passes=5, lam=1.5):
 To follow Turney’s semantic test *and* keep the evaluation strictly out‑of‑sample, each trial proceeds through five steps:
 
 1. **Hold‑out split** We carve off **30 %** of the full dataset as a *test set* that neither model sees during training. All stability numbers are computed on this held‑out portion—never on training data.
-2. **Dual training sets** The remaining 70 % is split into two equal halves. Each half trains a separate network—e.g. *method A* (standard) versus *method D* (dropout‑consistency)—using identical hyper‑parameters but independent random seeds.
+2. **Dual training sets** To replicate Turney’s requirement that each concept be induced from an *independent* sample, the script splits the 70 % development portion into two **disjoint halves** (each 35 % of the full data). Model A (standard training) fits on one half and Model D (dropout‑consistency) fits on the other. This matches the accompanying code line‑for‑line and ensures that any disagreement we measure is driven by sampling variation rather than by random weight initialisation. (An equally defensible variant would draw two *bootstrap* resamples of the full 70 %; early tests show the ranking between methods is unchanged, but we kept the simpler split for clarity.)
 3. **Prediction collection** With dropout **disabled** (`model.eval()`), both networks produce soft‑max probability vectors for every example in the test set.
 4. **Agreement score** For each test example we compute the symmetric KL divergence
-   $\text{SKL}(P,Q)=\tfrac12\bigl[\operatorname{KL}(P\!\parallel\!Q)+\operatorname{KL}(Q\!\parallel\!P)\bigr]$
+   $\text{SKL}(P,Q)=\tfrac12\bigl[\mathrm{KL}(P\!\parallel\!Q)+\mathrm{KL}(Q\!\parallel\!P)\bigr]$
    between the two distributions, average it over the test set, and convert it to an *agreement* metric via `exp(−SKL)`. Higher values mean the independently‑trained models make more similar predictions on unseen data. (We also log an MSE‑based score for completeness.)
 5. **Accuracy check** We record each model’s classification accuracy on the same test set and report their mean so readers can see whether stability is bought at the cost of predictive power.
 
@@ -39,13 +39,21 @@ The entire pipeline is repeated **ten times** with different random seeds; we re
 
 ## Relationship to R‑Drop
 
-**R‑Drop** feeds each training example through *two* dropout masks and adds a **bidirectional KL** term to the loss to narrow the train–test gap of a *single* run. Our method differs in three ways:
+**R‑Drop** ("Regularized Dropout," Wang et al., 2021) also makes each training example go through dropout *twice* and forces the two subnetworks to agree. Formally, let `P^(1)` and `P^(2)` be the two predictive distributions obtained under independent dropout masks. R‑Drop minimises the sum of two negative‑log‑likelihood terms plus a *bidirectional* Kullback–Leibler penalty:
 
-1. **Scope** – We can average over *n ≥ 2* passes, not just two.
-2. **Penalty** – We use mean‑squared error for efficiency; any distance could work.
-3. **Goal** – We judge success by **between‑bootstrap agreement**, the quantity Turney links to conceptual repeatability, rather than by the validation accuracy of one model.
+$$
+\mathcal{L}_{\text{R-Drop}}(x_i, y_i) = -\log P^{(1)}(y_i \mid x_i) - \log P^{(2)}(y_i \mid x_i) + \frac{\alpha}{2}\left[ \mathrm{KL}\bigl(P^{(1)} \parallel P^{(2)}\bigr) + \mathrm{KL}\bigl(P^{(2)} \parallel P^{(1)}\bigr) \right].
+$$
 
----
+where `α` controls how strongly disagreement is punished. Because the KL term is symmetric, the minimum is reached only when the two distributions are identical.
+
+R‑Drop and **DCT** share the idea of *in‑training consensus*, but they diverge on three axes:
+
+1. **Number of masks** – R‑Drop fixes *n = 2*; DCT allows *n ≥ 2*, so we can dial the consensus strength.
+2. **Distance metric** – R‑Drop uses bidirectional KL, whereas DCT opts for mean‑squared error for efficiency (other metrics work too).
+3. **Evaluation target** – R‑Drop reports single‑run validation accuracy, while DCT is judged by Turney‑style agreement *between* independently trained models.
+
+Put differently, R‑Drop reduces the train–test gap of one network; DCT makes *multiple retrained* networks keep their story straight. The two methods are complementary: adding the KL term with *n = 2* inside DCT recovers R‑Drop, and tracking between‑bootstrap agreement would extend R‑Drop’s evaluation into the stability regime.
 
 ## Experimental Snapshot
 
