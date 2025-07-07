@@ -1,4 +1,4 @@
-## Dropout‑Consistency Training
+## Dropout‑Consistency Training
 
 Turney (1995) argues that a good learner should discover *essentially the same concept* when it is trained on two **near‑identical** samples drawn from the same distribution. Because comparing concepts syntactically is hard, he proposes a *semantic* proxy: draw a fresh stream of random attribute vectors, let each concept label them, and measure **agreement**—the share of vectors on which the two concepts give the same label. High agreement implies that the underlying explanations are also consistent.
 
