@@ -1,8 +1,8 @@
-# Making Neural Networks Stable with Dropout‑Consistency Training
+## Dropout‑Consistency Training
 
 Turney (1995) argues that a good learner should discover *essentially the same concept* when it is trained on two **near‑identical** samples drawn from the same distribution. Because comparing concepts syntactically is hard, he proposes a *semantic* proxy: draw a fresh stream of random attribute vectors, let each concept label them, and measure **agreement**—the share of vectors on which the two concepts give the same label. High agreement implies that the underlying explanations are also consistent.
 
-We borrow that idea but flip the workflow. Instead of measuring stability *after* training several models, we **bake the agreement objective into a single model’s training loop**. During each minibatch we forward the data through the network multiple times under independent dropout masks, average the usual cross‑entropy, and penalise disagreement among the resulting probability distributions. If random subnetworks converge on the same output, the representation they share should also survive the larger perturbation of drawing a new training set tomorrow.
+We borrow that idea but flip the workflow. Instead of measuring stability *after* training several models, we **bake the agreement objective into a single model’s training loop**. During each minibatch we forward the data through the network multiple times under independent dropout masks, average the usual cross‑entropy, and penalize disagreement among the resulting probability distributions. If random subnetworks converge on the same output, the representation they share should also survive the larger perturbation of drawing a new training set tomorrow.
 
 ```python
 import torch.nn.functional as F
