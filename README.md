@@ -22,13 +22,13 @@ Paired change against `standard` (dropout 0.3, early stopping), mean over 50 tri
 
 | Method | Train / predict cost | Δ accuracy | Δ agreement | vs single-pass frontier at equal accuracy |
 |---|---|---|---|---|
-| `wd=10` (weight decay) | 1× / 1× | +0.7 | **+1.6** | defines it |
+| `wd=5`, `wd=10` (weight decay) | 1× / 1× | +1.0, +0.7 | **+1.1, +1.6** | define it |
 | `dropout=0.5` | 1× / 1× | −0.3 | +0.0 | part of the sweep; below `wd=10` everywhere |
-| `DCT lam=5` | 5× / 1× | +0.3 | +0.4 | −0.1 to −2.9 |
+| `DCT lam=5` | 5× / 1× | +0.3 | +0.4 | −0.1 to −2.8 |
 | `seed-ens-5` | 5× / 5× | **+1.0** | **+1.9** | +1.7 to −1.4 |
 | `bagging-5` | 5× / 5× | −0.2 | +0.4 | −0.1 to −2.6 |
 
-- **One model, no extra compute: weight decay.** It raises both accuracy and agreement on every dataset but High Noise, and every other single-model method sits below it at matched accuracy.
+- **One model, no extra compute: weight decay, 5 to 10.** Both settings raise accuracy and agreement on every dataset, and every other single-model method sits below them at matched accuracy. Beyond 10 the model collapses.
 - **Five models at prediction time: average five seeds.** It is the only arm that beats the frontier anywhere (High Dim, +1.7 ± 0.7), and it reduces both seed and sample disagreement. Bagging on these sample sizes does little; Breiman (1996) predicts that for a learner this stable.
 - **DCT's niche is narrow:** one model at prediction time, and you specifically want two seeds on the same data to agree. Even there, `wd=10` does as much (Table 3).
 
@@ -53,7 +53,7 @@ The rungs of the ladder, by how directly each attacks sample variance: (1) more 
 
 - **Linear simulation** (`linear_sim.py`). x ~ N(0, Σ) in 30 dimensions with eigenvalues 1/k; the true coefficient lies on the five largest eigendirections (shrinkage removes noise and keeps signal) or the five smallest (shrinkage eats the signal). Bayes accuracy 80%. Each of 50 trials draws two disjoint halves of n = 100 or 300 and a 2,000-point test set. Sweeps: ridge over C; dropout via Wager et al.'s closed-form penalty over q; DCT over λ at q = 0.3 in closed form and with sampled masks (5 passes, and 2 passes at λ=5); bagging-5. Deterministic arms are fit by L-BFGS, so the comparison is between penalties, not optimizers.
 - **MLP experiment** (`experiment.py`). Five datasets: three synthetic `make_classification` problems (High Noise, Small Sample, High Dim), Breast Cancer, and 3,000 rows of UCI Adult. Per trial, 30% is held out as a test set and the rest is split into two disjoint halves; each half keeps a fifth for early stopping (patience 5 on validation cross-entropy, up to 100 epochs). Three models per arm: A on half 1, B on half 2 with the same seed, C on half 1 with another seed. (A, B) is the cross-sample pair; (A, C) the seed-only pair. The network is a 2-layer MLP (64 units, ReLU, dropout), AdamW, batch 32. 50 trials, every arm on the same splits.
-- **Arms.** `standard` (dropout 0.3); dropout 0.1 / 0.5 / 0.7; weight decay 1 / 3 / 10 / 30; `5 passes` (DCT's compute, no penalty); DCT λ = 0.5 / 1.5 / 5 / 15 with 5 passes, and λ=5 with 2 passes; `bagging-5` and `seed-ens-5` (five models, probabilities averaged); and `standard` on 25 / 50 / 75% of each half, to price agreement in data. The pre-registered primary DCT arm is λ=5, 5 passes.
+- **Arms.** `standard` (dropout 0.3); dropout 0.1 / 0.5 / 0.7; weight decay 1 / 3 / 5 / 10 / 20 / 30; `5 passes` (DCT's compute, no penalty); DCT λ = 0.5 / 1.5 / 5 / 15 with 5 passes, and λ=5 with 2 passes; `bagging-5` and `seed-ens-5` (five models, probabilities averaged); and `standard` on 25 / 50 / 75% of each half, to price agreement in data. The pre-registered primary DCT arm is λ=5, 5 passes.
 - **Metrics.** `agree`, the share of test points on which the pair gives the same label; Cohen's κ, which is agreement corrected for the pair's label frequencies, so collapsing to the majority class does not count (weight decay 30 does collapse on Adult); accuracy; confidence; the vote-ensemble statistics of point 6; and per-point across-model and mask variances for the mechanism test.
 - **Frontier test.** For each target arm, the agreement of the single-pass sweeps (dropout rate and weight decay) is interpolated at the target's accuracy along their upper envelope. The SE is a bootstrap over trials, so it carries the pairing. Pre-registered rule: DCT "beats the frontier" if it is above by more than two SEs on at least three of five datasets.
 
@@ -85,12 +85,12 @@ The rungs of the ladder, by how directly each attacks sample variance: (1) more 
 
 | Arm | Adult (3k) | Breast Cancer | High Noise | Small Sample | High Dim |
 |---|---|---|---|---|---|
-| `DCT lam=1.5` | -3.0 ± 0.5 | -0.2 ± 0.2 | -1.3 ± 0.5 | -2.8 ± 0.5 | -2.2 ± 0.7 |
-| `DCT lam=5` | -2.9 ± 0.5 | -0.1 ± 0.2 | -0.4 ± 0.5 | -2.2 ± 0.5 | -2.1 ± 0.7 |
-| `DCT lam=15` | -5.2 ± 0.6 | -0.0 ± 0.2 | -1.1 ± 0.6 | -1.5 ± 0.4 | -2.2 ± 0.7 |
-| `DCT lam=5, 2 passes` | -2.8 ± 0.4 | -0.2 ± 0.2 | -1.2 ± 0.6 | -2.0 ± 0.5 | -2.3 ± 0.7 |
-| `bagging-5` | -0.1 ± 0.4 | -0.4 ± 0.2 | -2.2 ± 0.7 | -2.0 ± 0.6 | -2.6 ± 1.2 |
-| `seed-ens-5` | -0.8 ± 0.3 | -0.2 ± 0.2 | more accurate than any frontier point | -1.4 ± 0.4 | +1.7 ± 0.7 |
+| `DCT lam=1.5` | -2.9 ± 0.5 | -0.3 ± 0.2 | -1.6 ± 0.5 | -2.8 ± 0.5 | -2.2 ± 0.7 |
+| `DCT lam=5` | -2.8 ± 0.5 | -0.1 ± 0.2 | -0.8 ± 0.5 | -2.2 ± 0.5 | -2.1 ± 0.7 |
+| `DCT lam=15` | -5.1 ± 0.6 | -0.1 ± 0.2 | -1.5 ± 0.6 | -1.5 ± 0.5 | -2.2 ± 0.7 |
+| `DCT lam=5, 2 passes` | -2.8 ± 0.4 | -0.3 ± 0.2 | -1.6 ± 0.6 | -2.0 ± 0.5 | -2.3 ± 0.7 |
+| `bagging-5` | -0.1 ± 0.4 | -0.4 ± 0.2 | -2.6 ± 0.7 | -2.0 ± 0.6 | -2.6 ± 1.2 |
+| `seed-ens-5` | -0.8 ± 0.3 | -0.3 ± 0.2 | more accurate than any frontier point | -1.4 ± 0.4 | +1.7 ± 0.7 |
 
 **Table 3. Where the disagreement goes.** Change vs `standard` in disagreement between two seeds on the same half (seed) and between the two halves (sample), in points. `standard` row: levels.
 
@@ -136,7 +136,7 @@ The rungs of the ladder, by how directly each attacks sample variance: (1) more 
 ### What the tests say
 
 - **Point 3, the mapping: confirmed.** In the linear simulation DCT λ=5 reproduces plain dropout at q = 0.69 to 0.73 with an accuracy gap of 0.0 to 0.3 points (Table 5); the forecast was 0.55 to 0.7. The closed-form penalty and the sampled-mask loss agree within 0.3 points everywhere, so the delta-method form is the right description, and 2 passes match 5 passes, so the extra passes buy nothing but a quieter gradient. Every sweep traces the same curve (figure above): when the signal is on the large eigendirections shrinkage helps all of them equally, and when it is on the small ones shrinkage hurts all of them equally. Bagging a linear model changes nothing, as Breiman (1996) says it should.
-- **The frontier: DCT is dominated.** In the MLP experiment DCT λ=5 sits 2.1 to 2.9 points *below* the single-pass frontier on Adult, Small Sample and High Dim (|t| > 3), 0.4 ± 0.5 below on High Noise, and at the ceiling on Breast Cancer (Table 2). The frontier is weight decay 10. Against the dropout sweep alone DCT is a tie or slightly more accurate, which is the earlier finding; the earlier study never tried a weight decay that was large enough to matter with AdamW (the penalty is multiplied by the learning rate, so 0.1 does nothing).
+- **The frontier: DCT is dominated.** In the MLP experiment DCT λ=5 sits 2.1 to 2.8 points *below* the single-pass frontier on Adult, Small Sample and High Dim (|t| > 3), 0.8 ± 0.5 below on High Noise, and at the ceiling on Breast Cancer (Table 2). The frontier is weight decay 5 to 10: both raise accuracy and agreement on every dataset, and 20 is already too much (it collapses to the majority class on Adult and loses 20 points on High Noise). Against the dropout sweep alone DCT is a tie or slightly more accurate, which is the earlier finding; the earlier study never tried a weight decay that was large enough to matter with AdamW (the penalty is multiplied by the learning rate, so 0.1 does nothing).
 - **Point 5, seed vs sample: confirmed.** DCT λ=5 cuts seed-only disagreement by 2.4 to 3.3 points on the three noisy datasets but cross-sample disagreement by only 0.3 to 1.3, and on Adult cross-sample disagreement *rises* by 0.8 while seed disagreement falls (Table 3; mechanism figure, panel a). Weight decay 10 cuts both, by similar amounts. DCT is a seed-variance reducer.
 - **Point 6, overconfidence: holds in direction, not as an identity.** The vote ensemble here is far from calibrated: on Adult, two models disagree on 7% of points but each is wrong on 17%, so the thirty models mostly share their mistakes (bias, not variance). Across arms, each point of agreement gained comes with about half a point of added vote overconfidence (panel b, slope 0.5). The clean "disagreement equals error" identity needs a regime with more variance than bias than these small problems have.
 - **Point 4, targeting: the penalty acts where the vote is uncertain, and nowhere else.** At baseline, mask variance predicts across-sample variance well (Spearman 0.54 to 0.94 on the logit scale), so Σ_m is not useless as a map of where the fit varies. But DCT's variance reduction is *negatively* correlated with baseline mask variance on four of five datasets (−0.2 to −0.8; panel c), while weight decay's is positively correlated (0.5 to 0.9). That is the [p(1−p)]² weighting from point 3: DCT switches off on confident points, which are exactly where mask variance is largest, and if anything pushes their logits further out. Weight decay shrinks everywhere, including there.

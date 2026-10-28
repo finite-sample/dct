@@ -19,12 +19,12 @@
 
 | Arm | Adult (3k) | Breast Cancer | High Noise | Small Sample | High Dim |
 |---|---|---|---|---|---|
-| `DCT lam=1.5` | -3.0 ± 0.5 | -0.2 ± 0.2 | -1.3 ± 0.5 | -2.8 ± 0.5 | -2.2 ± 0.7 |
-| `DCT lam=5` | -2.9 ± 0.5 | -0.1 ± 0.2 | -0.4 ± 0.5 | -2.2 ± 0.5 | -2.1 ± 0.7 |
-| `DCT lam=15` | -5.2 ± 0.6 | -0.0 ± 0.2 | -1.1 ± 0.6 | -1.5 ± 0.4 | -2.2 ± 0.7 |
-| `DCT lam=5, 2 passes` | -2.8 ± 0.4 | -0.2 ± 0.2 | -1.2 ± 0.6 | -2.0 ± 0.5 | -2.3 ± 0.7 |
-| `bagging-5` | -0.1 ± 0.4 | -0.4 ± 0.2 | -2.2 ± 0.7 | -2.0 ± 0.6 | -2.6 ± 1.2 |
-| `seed-ens-5` | -0.8 ± 0.3 | -0.2 ± 0.2 | more accurate than any frontier point | -1.4 ± 0.4 | +1.7 ± 0.7 |
+| `DCT lam=1.5` | -2.9 ± 0.5 | -0.3 ± 0.2 | -1.6 ± 0.5 | -2.8 ± 0.5 | -2.2 ± 0.7 |
+| `DCT lam=5` | -2.8 ± 0.5 | -0.1 ± 0.2 | -0.8 ± 0.5 | -2.2 ± 0.5 | -2.1 ± 0.7 |
+| `DCT lam=15` | -5.1 ± 0.6 | -0.1 ± 0.2 | -1.5 ± 0.6 | -1.5 ± 0.5 | -2.2 ± 0.7 |
+| `DCT lam=5, 2 passes` | -2.8 ± 0.4 | -0.3 ± 0.2 | -1.6 ± 0.6 | -2.0 ± 0.5 | -2.3 ± 0.7 |
+| `bagging-5` | -0.1 ± 0.4 | -0.4 ± 0.2 | -2.6 ± 0.7 | -2.0 ± 0.6 | -2.6 ± 1.2 |
+| `seed-ens-5` | -0.8 ± 0.3 | -0.3 ± 0.2 | more accurate than any frontier point | -1.4 ± 0.4 | +1.7 ± 0.7 |
 
 **Table 3. Where the disagreement goes.** Change vs `standard` in disagreement between two seeds on the same half (seed) and between the two halves (sample), in points. `standard` row: levels.
 

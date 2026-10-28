@@ -47,7 +47,9 @@ ARMS = {
     "dropout=0.7": BASE | dict(dropout=0.7),
     "wd=1": BASE | dict(weight_decay=1.0),
     "wd=3": BASE | dict(weight_decay=3.0),
+    "wd=5": BASE | dict(weight_decay=5.0),
     "wd=10": BASE | dict(weight_decay=10.0),
+    "wd=20": BASE | dict(weight_decay=20.0),
     "wd=30": BASE | dict(weight_decay=30.0),
     "5 passes": BASE | dict(n_passes=5),
     "DCT lam=0.5": BASE | dict(n_passes=5, lam=0.5),
@@ -149,7 +151,7 @@ def fit_arm(cfg, half, Xte, seed, fixed_epochs=None):
     return np.mean(probs, 0), mv, float(np.mean(epochs))
 
 
-def one_trial(X, y, trial, preds_dir, fixed_epochs=None):
+def one_trial(X, y, trial, preds_dir, fixed_epochs=None, arms=None):
     torch.set_num_threads(1)
     Xtr, Xte, ytr, yte = train_test_split(X, y, test_size=0.3, random_state=trial)
     X1, X2, y1, y2 = train_test_split(Xtr, ytr, test_size=0.5, random_state=trial * 2)
@@ -159,7 +161,12 @@ def one_trial(X, y, trial, preds_dir, fixed_epochs=None):
     ]
     base = 1000 * trial
     rows, store = [], {"y": yte}
+    path = preds_dir / f"trial_{trial}.npz"
+    if arms and path.exists():  # adding arms to a finished run: keep what is there
+        store = dict(np.load(path))
     for arm, cfg in ARMS.items():
+        if arms and arm not in arms:
+            continue
         fits = {
             "A": fit_arm(
                 cfg, halves[0], halves[0].transform(Xte), base + 0, fixed_epochs
@@ -179,7 +186,7 @@ def one_trial(X, y, trial, preds_dir, fixed_epochs=None):
         for pair, (u, v) in {"sample": ("A", "B"), "seed": ("A", "C")}.items():
             m = pair_metrics(fits[u][0], fits[v][0], yte)
             rows.append(dict(arm=arm, trial=trial, pair=pair, epochs=epochs) | m)
-    np.savez_compressed(preds_dir / f"trial_{trial}.npz", **store)
+    np.savez_compressed(path, **store)
     return rows
 
 
@@ -188,6 +195,12 @@ def main():
     ap.add_argument("--trials", type=int, default=50)
     ap.add_argument("--out", type=Path, default=Path("results"))
     ap.add_argument("--datasets", nargs="*", default=None)
+    ap.add_argument(
+        "--arms",
+        nargs="*",
+        default=None,
+        help="run only these arms and merge them into existing results",
+    )
     ap.add_argument(
         "--fixed-epochs",
         type=int,
@@ -200,16 +213,19 @@ def main():
         if args.datasets and name not in args.datasets:
             continue
         path = args.out / f"{name}.csv"
-        if path.exists():
+        if path.exists() and not args.arms:
             continue
         preds_dir = args.out / "preds" / name
         preds_dir.mkdir(parents=True, exist_ok=True)
         res = Parallel(n_jobs=N_JOBS)(
-            delayed(one_trial)(X, y, t, preds_dir, args.fixed_epochs)
+            delayed(one_trial)(X, y, t, preds_dir, args.fixed_epochs, args.arms)
             for t in range(args.trials)
         )
         df = pd.DataFrame([r for rows in res for r in rows])
         df.insert(0, "dataset", name)
+        if args.arms and path.exists():
+            old = pd.read_csv(path)
+            df = pd.concat([old[~old.arm.isin(args.arms)], df], ignore_index=True)
         df.to_csv(path, index=False)
         print(f"wrote {path}", flush=True)
 

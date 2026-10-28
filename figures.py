@@ -32,7 +32,13 @@ C = {
 }
 SWEEP = {
     "dropout": ["dropout=0.1", "standard", "dropout=0.5", "dropout=0.7"],
-    "wd": ["standard", "wd=1", "wd=3", "wd=10"],
+    "wd": [
+        "standard",
+        "wd=1",
+        "wd=3",
+        "wd=5",
+        "wd=10",
+    ],  # 20 and 30 collapse, off-panel
     "DCT": ["DCT lam=0.5", "DCT lam=1.5", "DCT lam=5", "DCT lam=15"],
     "data": ["data=25%", "data=50%", "data=75%", "standard"],
 }
