@@ -1,0 +1,421 @@
+dataset,pair,sweep,target,metric,delta,se,t,in_range
+Adult (3k),sample,dropout,DCT lam=0.5,agree,-0.03984444444444424,0.0020904045063097156,-19.060638419108372,1.0
+Adult (3k),sample,dropout,DCT lam=0.5,kappa,-0.12976866115215735,0.005943539993190775,-21.83356405455789,1.0
+Adult (3k),sample,dropout,DCT lam=1.5,agree,-0.03733333333333322,0.0022027715237125612,-16.948345723305632,1.0
+Adult (3k),sample,dropout,DCT lam=1.5,kappa,-0.12392220130103915,0.0062265833136654755,-19.90211887618483,1.0
+Adult (3k),sample,dropout,DCT lam=5,agree,-0.026355555555555576,0.002005203610362853,-13.143580741302571,1.0
+Adult (3k),sample,dropout,DCT lam=5,kappa,-0.09922207951314477,0.006468078325866367,-15.340271795464762,1.0
+Adult (3k),sample,dropout,DCT lam=15,agree,-0.013333333333332975,0.0018855364863829952,-7.071373813036187,1.0
+Adult (3k),sample,dropout,DCT lam=15,kappa,-0.05742688243238525,0.0056582102831151835,-10.149301556316198,1.0
+Adult (3k),sample,dropout,"DCT lam=5, 2 passes",agree,-0.02388888888888918,0.001815924287185485,-13.155222966875318,1.0
+Adult (3k),sample,dropout,"DCT lam=5, 2 passes",kappa,-0.08170638796705176,0.00568624029483753,-14.369140896355018,1.0
+Adult (3k),sample,dropout,bagging-5,agree,-0.02486666666666637,0.0017347350387925953,-14.334561826787096,1.0
+Adult (3k),sample,dropout,bagging-5,kappa,-0.09907050370758308,0.006111216808041006,-16.211256582687145,1.0
+Adult (3k),sample,dropout,seed-ens-5,agree,-0.032711111111111024,0.0018849683987264695,-17.353665522038167,1.0
+Adult (3k),sample,dropout,seed-ens-5,kappa,-0.10004023672260631,0.006089033299794796,-16.429576222875596,1.0
+Adult (3k),sample,wd,DCT lam=0.5,agree,-0.08228257189261479,0.003315215262452939,-24.819676967743455,1.0
+Adult (3k),sample,wd,DCT lam=0.5,kappa,-0.1752486421692535,0.011925223011516597,-14.695628081756617,1.0
+Adult (3k),sample,wd,DCT lam=1.5,agree,-0.07818284513232054,0.0032021960044455564,-24.415384012652748,1.0
+Adult (3k),sample,wd,DCT lam=1.5,kappa,-0.1694021823181353,0.011957034836376371,-14.167574539698618,1.0
+Adult (3k),sample,wd,DCT lam=5,agree,-0.06481695232635898,0.00334130631143924,-19.39868610802091,1.0
+Adult (3k),sample,wd,DCT lam=5,kappa,-0.14470206053024093,0.012228074700282808,-11.833593110687678,1.0
+Adult (3k),sample,wd,DCT lam=15,agree,-0.04813987580013368,0.0033168577150900734,-14.51369939118006,1.0
+Adult (3k),sample,wd,DCT lam=15,kappa,-0.10290686344948141,0.012477936619107921,-8.247105798878346,1.0
+Adult (3k),sample,wd,"DCT lam=5, 2 passes",agree,-0.0609277997516009,0.003390128616524048,-17.97212042476168,1.0
+Adult (3k),sample,wd,"DCT lam=5, 2 passes",kappa,-0.12718636898414792,0.012570625078777634,-10.117744200236343,1.0
+Adult (3k),sample,wd,bagging-5,agree,-0.062134005923378366,0.0026527864223527507,-23.422166745060405,1.0
+Adult (3k),sample,wd,bagging-5,kappa,-0.14455048472467924,0.011374217397359864,-12.708609276118786,1.0
+Adult (3k),sample,wd,seed-ens-5,agree,-0.07268844176937017,0.0030172565075622408,-24.090905624758435,1.0
+Adult (3k),sample,wd,seed-ens-5,kappa,-0.14552021773970247,0.012047372918962872,-12.079000020880066,1.0
+Adult (3k),sample,single-pass,DCT lam=0.5,agree,-0.08228257189261479,0.003315215262452939,-24.819676967743455,1.0
+Adult (3k),sample,single-pass,DCT lam=0.5,kappa,-0.1752486421692535,0.011925223011516597,-14.695628081756617,1.0
+Adult (3k),sample,single-pass,DCT lam=1.5,agree,-0.07818284513232054,0.0032021960044455564,-24.415384012652748,1.0
+Adult (3k),sample,single-pass,DCT lam=1.5,kappa,-0.1694021823181353,0.011957034836376371,-14.167574539698618,1.0
+Adult (3k),sample,single-pass,DCT lam=5,agree,-0.06481695232635898,0.00334130631143924,-19.39868610802091,1.0
+Adult (3k),sample,single-pass,DCT lam=5,kappa,-0.14470206053024093,0.012228074700282808,-11.833593110687678,1.0
+Adult (3k),sample,single-pass,DCT lam=15,agree,-0.04813987580013368,0.0033585015967162782,-14.333736165914491,1.0
+Adult (3k),sample,single-pass,DCT lam=15,kappa,-0.10290686344948141,0.012472569528236617,-8.250654623853636,1.0
+Adult (3k),sample,single-pass,"DCT lam=5, 2 passes",agree,-0.0609277997516009,0.003390128616524048,-17.97212042476168,1.0
+Adult (3k),sample,single-pass,"DCT lam=5, 2 passes",kappa,-0.12718636898414792,0.012570625078777634,-10.117744200236343,1.0
+Adult (3k),sample,single-pass,bagging-5,agree,-0.062134005923378366,0.0026527864223527507,-23.422166745060405,1.0
+Adult (3k),sample,single-pass,bagging-5,kappa,-0.14455048472467924,0.011374217397359864,-12.708609276118786,1.0
+Adult (3k),sample,single-pass,seed-ens-5,agree,-0.07268844176937017,0.0030172565075622408,-24.090905624758435,1.0
+Adult (3k),sample,single-pass,seed-ens-5,kappa,-0.14552021773970247,0.012047372918962872,-12.079000020880066,1.0
+Adult (3k),seed,dropout,DCT lam=0.5,agree,-0.013044444444444525,0.0014991097934572992,-8.701460360925916,1.0
+Adult (3k),seed,dropout,DCT lam=0.5,kappa,-0.0416668272037245,0.005025990377730119,-8.290271980692177,1.0
+Adult (3k),seed,dropout,DCT lam=1.5,agree,-0.010955555555555385,0.0015007384175880114,-7.300110017282804,1.0
+Adult (3k),seed,dropout,DCT lam=1.5,kappa,-0.03675247856043651,0.005129751551925773,-7.16457282353941,1.0
+Adult (3k),seed,dropout,DCT lam=5,agree,-0.008333333333333415,0.0013062365853053464,-6.37965084356094,1.0
+Adult (3k),seed,dropout,DCT lam=5,kappa,-0.03196513254679767,0.004642875514052204,-6.884770537149116,1.0
+Adult (3k),seed,dropout,DCT lam=15,agree,-0.004155555555555579,0.0011610659611050148,-3.5790865418194118,0.989
+Adult (3k),seed,dropout,DCT lam=15,kappa,-0.019958658636609505,0.0039485560233290746,-5.054672776247486,0.989
+Adult (3k),seed,dropout,"DCT lam=5, 2 passes",agree,-0.00873333333333337,0.0013703961382762306,-6.372853140347214,1.0
+Adult (3k),seed,dropout,"DCT lam=5, 2 passes",kappa,-0.029577806748472102,0.004767392011416204,-6.204190189865612,1.0
+Adult (3k),seed,dropout,bagging-5,agree,-0.013222222222222357,0.0015266487191246706,-8.660946068722042,1.0
+Adult (3k),seed,dropout,bagging-5,kappa,-0.04988041639859642,0.005340677410572585,-9.339717148961565,1.0
+Adult (3k),seed,dropout,seed-ens-5,agree,0.01408888888888915,0.0013295761166162924,10.596526752258981,1.0
+Adult (3k),seed,dropout,seed-ens-5,kappa,0.04922350300928291,0.0042112499924658155,11.688573012133398,1.0
+Adult (3k),seed,wd,DCT lam=0.5,agree,-0.024742021575348883,0.002511747619827063,-9.85052056187572,1.0
+Adult (3k),seed,wd,DCT lam=0.5,kappa,-0.024315309999985213,0.010482710910196083,-2.319563155780129,1.0
+Adult (3k),seed,wd,DCT lam=1.5,agree,-0.021769387794627226,0.0025821446564218793,-8.43073905270413,1.0
+Adult (3k),seed,wd,DCT lam=1.5,kappa,-0.01940096135669722,0.010777533441928604,-1.8001300075971265,1.0
+Adult (3k),seed,wd,DCT lam=5,agree,-0.017751778901090254,0.002276875793720448,-7.796551287535799,1.0
+Adult (3k),seed,wd,DCT lam=5,kappa,-0.014613615343058384,0.009679798128277364,-1.5097024906302514,1.0
+Adult (3k),seed,wd,DCT lam=15,agree,-0.011480921116340248,0.0028100805304897363,-4.085619964186354,0.999
+Adult (3k),seed,wd,DCT lam=15,kappa,-0.002607141432870219,0.010041271003614958,-0.2596425723328872,0.999
+Adult (3k),seed,wd,"DCT lam=5, 2 passes",agree,-0.01768665001065184,0.0026369087078801515,-6.707342562826298,1.0
+Adult (3k),seed,wd,"DCT lam=5, 2 passes",kappa,-0.012226289544732816,0.010688686057249245,-1.1438533678740375,1.0
+Adult (3k),seed,wd,bagging-5,agree,-0.022861604012937353,0.0026366368205339805,-8.670744425205799,1.0
+Adult (3k),seed,wd,bagging-5,kappa,-0.03252889919485713,0.01054793558101103,-3.0839114388807447,1.0
+Adult (3k),seed,wd,seed-ens-5,agree,0.003850653651734981,0.002512268845491223,1.5327394831352392,1.0
+Adult (3k),seed,wd,seed-ens-5,kappa,0.0665750202130222,0.010402297536880229,6.400030375692255,1.0
+Adult (3k),seed,single-pass,DCT lam=0.5,agree,-0.024742021575348883,0.0025062005493540606,-9.8723230994925,1.0
+Adult (3k),seed,single-pass,DCT lam=0.5,kappa,-0.0416668272037245,0.005156757414723478,-8.080044076682402,1.0
+Adult (3k),seed,single-pass,DCT lam=1.5,agree,-0.021769387794627226,0.0025772916354599796,-8.446614071574386,1.0
+Adult (3k),seed,single-pass,DCT lam=1.5,kappa,-0.03675247856043651,0.0052986525333906295,-6.936193367810523,1.0
+Adult (3k),seed,single-pass,DCT lam=5,agree,-0.017751778901090254,0.0022667644896658973,-7.831329183962433,1.0
+Adult (3k),seed,single-pass,DCT lam=5,kappa,-0.03196513254679767,0.004676990080186636,-6.834552136899571,1.0
+Adult (3k),seed,single-pass,DCT lam=15,agree,-0.011480921116340248,0.002687390935229562,-4.272144021115233,1.0
+Adult (3k),seed,single-pass,DCT lam=15,kappa,-0.019958658636609505,0.0039998035332360375,-4.989909747007491,1.0
+Adult (3k),seed,single-pass,"DCT lam=5, 2 passes",agree,-0.01768665001065184,0.0026292535816313674,-6.726871129591784,1.0
+Adult (3k),seed,single-pass,"DCT lam=5, 2 passes",kappa,-0.029577806748472102,0.00490565566132356,-6.02932794114863,1.0
+Adult (3k),seed,single-pass,bagging-5,agree,-0.022861604012937353,0.002631790280776964,-8.686711923789039,1.0
+Adult (3k),seed,single-pass,bagging-5,kappa,-0.04988041639859642,0.005454002613615437,-9.145653189471226,1.0
+Adult (3k),seed,single-pass,seed-ens-5,agree,0.003850653651734981,0.0025065384531316455,1.5362435979882976,1.0
+Adult (3k),seed,single-pass,seed-ens-5,kappa,0.04922350300928291,0.004430560684587374,11.109994087321068,1.0
+Breast Cancer,sample,dropout,DCT lam=0.5,agree,-0.007485380116959095,0.0016166107204819197,-4.630292266481857,0.96
+Breast Cancer,sample,dropout,DCT lam=0.5,kappa,-0.016611545925090065,0.003481087186779061,-4.771941934743726,0.96
+Breast Cancer,sample,dropout,DCT lam=1.5,agree,-0.007251461988304175,0.0016724478472307223,-4.335837437508927,0.917
+Breast Cancer,sample,dropout,DCT lam=1.5,kappa,-0.0161338162634187,0.0036109727404841107,-4.467997246984394,0.917
+Breast Cancer,sample,dropout,DCT lam=5,agree,-0.00713450292397666,0.0016340715635130604,-4.366089639696271,0.948
+Breast Cancer,sample,dropout,DCT lam=5,kappa,-0.015822683867564247,0.0035249472888036425,-4.488771766267864,0.948
+Breast Cancer,sample,dropout,DCT lam=15,agree,-0.0035087719298244613,0.001652677680642571,-2.1230830251548083,0.831
+Breast Cancer,sample,dropout,DCT lam=15,kappa,-0.00793183310356782,0.0035665973480580055,-2.223921662445766,0.831
+Breast Cancer,sample,dropout,"DCT lam=5, 2 passes",agree,-0.004444444444444362,0.0016467890169933215,-2.698854800816531,0.748
+Breast Cancer,sample,dropout,"DCT lam=5, 2 passes",kappa,-0.010062563479892539,0.003560007723530705,-2.826556642948179,0.748
+Breast Cancer,sample,dropout,bagging-5,agree,-0.005380116959064374,0.0015712938306924255,-3.424004380322365,0.998
+Breast Cancer,sample,dropout,bagging-5,kappa,-0.011874128129925832,0.0033932010369944624,-3.4993883358126565,0.998
+Breast Cancer,sample,dropout,seed-ens-5,agree,-0.006549707602339194,0.0016663510197670122,-3.9305689645480393,0.982
+Breast Cancer,sample,dropout,seed-ens-5,kappa,-0.014490386788361453,0.003603619699654044,-4.021064373067048,0.982
+Breast Cancer,sample,wd,DCT lam=0.5,agree,-0.009974141703465222,0.0018520145931316433,-5.385563235006458,0.999
+Breast Cancer,sample,wd,DCT lam=0.5,kappa,-0.021815554530873027,0.0040370580796666245,-5.403824790322196,0.999
+Breast Cancer,sample,wd,DCT lam=1.5,agree,-0.009681346222699894,0.001897168046362652,-5.1030514883810465,0.997
+Breast Cancer,sample,wd,DCT lam=1.5,kappa,-0.02121085376942189,0.0041345381754355846,-5.1301627580660245,0.997
+Breast Cancer,sample,wd,DCT lam=5,agree,-0.009593825834427583,0.0018702485676074805,-5.129706286421866,0.999
+Breast Cancer,sample,wd,DCT lam=5,kappa,-0.020963206923457323,0.0040826160725505045,-5.134748541358953,0.999
+Breast Cancer,sample,wd,DCT lam=15,agree,-0.0058797788121097705,0.001945255845810135,-3.0226249286304223,0.996
+Breast Cancer,sample,wd,DCT lam=15,kappa,-0.01288189950979124,0.004219095588859156,-3.053237178083113,0.996
+Breast Cancer,sample,wd,"DCT lam=5, 2 passes",agree,-0.006776199758655954,0.0018706211325298626,-3.6224330201443284,0.985
+Breast Cancer,sample,wd,"DCT lam=5, 2 passes",kappa,-0.014927982486262814,0.004084793509939735,-3.6545256081948323,0.985
+Breast Cancer,sample,wd,bagging-5,agree,-0.008065136385938643,0.0018452967323391374,-4.370644701524564,1.0
+Breast Cancer,sample,wd,bagging-5,kappa,-0.017501373734974623,0.004014592228017044,-4.359439948305585,1.0
+Breast Cancer,sample,wd,seed-ens-5,agree,-0.009077720756918928,0.001700782899488482,-5.337377721547584,1.0
+Breast Cancer,sample,wd,seed-ens-5,kappa,-0.01977904279399756,0.003693944055880518,-5.354451094761604,1.0
+Breast Cancer,sample,single-pass,DCT lam=0.5,agree,-0.009974141703465222,0.00178723724159454,-5.580759773429115,0.999
+Breast Cancer,sample,single-pass,DCT lam=0.5,kappa,-0.021815554530873027,0.003875255478080395,-5.629449375471716,0.999
+Breast Cancer,sample,single-pass,DCT lam=1.5,agree,-0.009681346222699894,0.0018343828838405967,-5.277712907149639,0.998
+Breast Cancer,sample,single-pass,DCT lam=1.5,kappa,-0.02121085376942189,0.003977902520748637,-5.332170323125472,0.998
+Breast Cancer,sample,single-pass,DCT lam=5,agree,-0.009593825834427583,0.0018057648792303004,-5.312887599473587,1.0
+Breast Cancer,sample,single-pass,DCT lam=5,kappa,-0.020963206923457323,0.003922103307133251,-5.3448890255722965,1.0
+Breast Cancer,sample,single-pass,DCT lam=15,agree,-0.0058797788121097705,0.001877972917651384,-3.1309177873891247,0.998
+Breast Cancer,sample,single-pass,DCT lam=15,kappa,-0.01288189950979124,0.004052269321439727,-3.1789346876911035,0.998
+Breast Cancer,sample,single-pass,"DCT lam=5, 2 passes",agree,-0.006776199758655954,0.0018193013454104831,-3.7246164720045662,0.99
+Breast Cancer,sample,single-pass,"DCT lam=5, 2 passes",kappa,-0.014927982486262814,0.003956250911718081,-3.773264845777954,0.99
+Breast Cancer,sample,single-pass,bagging-5,agree,-0.008065136385938643,0.0017622359884398998,-4.576649460597315,1.0
+Breast Cancer,sample,single-pass,bagging-5,kappa,-0.017501373734974623,0.0038134759193058643,-4.589349482023281,1.0
+Breast Cancer,sample,single-pass,seed-ens-5,agree,-0.009077720756918928,0.0016590409929667098,-5.47166754492671,1.0
+Breast Cancer,sample,single-pass,seed-ens-5,kappa,-0.01977904279399756,0.0035880231389500404,-5.512518182863637,1.0
+Breast Cancer,seed,dropout,DCT lam=0.5,agree,-0.000350877192982435,0.0011358641705055004,-0.3089077040138365,0.939
+Breast Cancer,seed,dropout,DCT lam=0.5,kappa,-0.0009113624407236509,0.00247509578548286,-0.3682129984904223,0.939
+Breast Cancer,seed,dropout,DCT lam=1.5,agree,-0.00011695906432740433,0.0010693758520721377,-0.10937133478446504,0.795
+Breast Cancer,seed,dropout,DCT lam=1.5,kappa,-0.0003801159190253145,0.0023368149165174383,-0.16266411016915377,0.795
+Breast Cancer,seed,dropout,DCT lam=5,agree,0.0012865497076022248,0.0010027403610336932,1.2830337319582523,0.851
+Breast Cancer,seed,dropout,DCT lam=5,kappa,0.002744596070673011,0.0021813353164679404,1.2582183261568025,0.851
+Breast Cancer,seed,dropout,DCT lam=15,agree,,0.0013252582748686675,,0.575
+Breast Cancer,seed,dropout,DCT lam=15,kappa,,0.0028842111050665373,,0.575
+Breast Cancer,seed,dropout,"DCT lam=5, 2 passes",agree,-0.0005847953216375767,0.001187786007046871,-0.4923406389434761,0.704
+Breast Cancer,seed,dropout,"DCT lam=5, 2 passes",kappa,-0.0013587479631864685,0.002585952306272356,-0.5254342703424026,0.704
+Breast Cancer,seed,dropout,bagging-5,agree,-0.003742690058479603,0.0012302769743786867,-3.042152406672272,0.993
+Breast Cancer,seed,dropout,bagging-5,kappa,-0.008125475388370607,0.00265716253821322,-3.057951958721537,0.993
+Breast Cancer,seed,dropout,seed-ens-5,agree,0.0056140350877192935,0.0009289612094144176,6.043347161135147,0.782
+Breast Cancer,seed,dropout,seed-ens-5,kappa,0.012066386596126244,0.002011604636568096,5.998388737417178,0.782
+Breast Cancer,seed,wd,DCT lam=0.5,agree,-0.0038596491228070073,0.0011546503179690702,-3.342699571239711,0.998
+Breast Cancer,seed,wd,DCT lam=0.5,kappa,-0.008394373087417972,0.002494817146035656,-3.364724785845287,0.998
+Breast Cancer,seed,wd,DCT lam=1.5,agree,-0.0036257309941519766,0.0011669332835444154,-3.1070593711572503,0.965
+Breast Cancer,seed,wd,DCT lam=1.5,kappa,-0.0078626530145669,0.0025195918874207136,-3.1206057829531417,0.965
+Breast Cancer,seed,wd,DCT lam=5,agree,-0.0022222222222223476,0.0011113004098453137,-1.9996593203197572,0.97
+Breast Cancer,seed,wd,DCT lam=5,kappa,-0.004738059412656703,0.0024000066688014796,-1.974185936334421,0.97
+Breast Cancer,seed,wd,DCT lam=15,agree,-0.0029239766081871066,0.001277772226899391,-2.288339460376559,0.87
+Breast Cancer,seed,wd,DCT lam=15,kappa,-0.0063072525954547265,0.0027902169609261332,-2.260488228614743,0.87
+Breast Cancer,seed,wd,"DCT lam=5, 2 passes",agree,-0.004093567251462149,0.0011965169713355015,-3.421236262861431,0.905
+Breast Cancer,seed,wd,"DCT lam=5, 2 passes",kappa,-0.008841048283151687,0.0025864972601490825,-3.41815489982081,0.905
+Breast Cancer,seed,wd,bagging-5,agree,-0.007251461988304175,0.001230755851978337,-5.891876911775846,1.0
+Breast Cancer,seed,wd,bagging-5,kappa,-0.01560925555568815,0.0026624238437106033,-5.8627988900270775,1.0
+Breast Cancer,seed,wd,seed-ens-5,agree,0.002105263157894721,0.0009257965614229082,2.274001919664754,0.962
+Breast Cancer,seed,wd,seed-ens-5,kappa,0.004583790306690538,0.002007179479014249,2.283697275014836,0.962
+Breast Cancer,seed,single-pass,DCT lam=0.5,agree,-0.0038596491228070073,0.001162054636446721,-3.3214007343138965,0.998
+Breast Cancer,seed,single-pass,DCT lam=0.5,kappa,-0.008394373087417972,0.0025089931400234197,-3.3457138457300113,0.998
+Breast Cancer,seed,single-pass,DCT lam=1.5,agree,-0.0036257309941519766,0.0011981783366077456,-3.0260361779007465,0.972
+Breast Cancer,seed,single-pass,DCT lam=1.5,kappa,-0.0078626530145669,0.002582492219650256,-3.044598916790437,0.972
+Breast Cancer,seed,single-pass,DCT lam=5,agree,-0.0022222222222223476,0.001115122890496686,-1.9928047761915724,0.977
+Breast Cancer,seed,single-pass,DCT lam=5,kappa,-0.004738059412656703,0.0024049220579506975,-1.970150923183822,0.977
+Breast Cancer,seed,single-pass,DCT lam=15,agree,-0.0029239766081871066,0.001345242106174323,-2.1735690510777124,0.895
+Breast Cancer,seed,single-pass,DCT lam=15,kappa,-0.0063072525954547265,0.0029307431798733566,-2.152100067576469,0.895
+Breast Cancer,seed,single-pass,"DCT lam=5, 2 passes",agree,-0.004093567251462149,0.001247544591456908,-3.281299345526077,0.924
+Breast Cancer,seed,single-pass,"DCT lam=5, 2 passes",kappa,-0.008841048283151687,0.0026928981830034835,-3.283097867922714,0.924
+Breast Cancer,seed,single-pass,bagging-5,agree,-0.007251461988304175,0.001230755851978337,-5.891876911775846,1.0
+Breast Cancer,seed,single-pass,bagging-5,kappa,-0.01560925555568815,0.0026624238437106033,-5.8627988900270775,1.0
+Breast Cancer,seed,single-pass,seed-ens-5,agree,0.002105263157894721,0.000943745343663441,2.2307534252010055,0.97
+Breast Cancer,seed,single-pass,seed-ens-5,kappa,0.004583790306690538,0.0020431704175203087,2.2434693980415252,0.97
+High Dim,sample,dropout,DCT lam=0.5,agree,-0.01607807807807826,0.006094284926382375,-2.638222247941788,0.792
+High Dim,sample,dropout,DCT lam=0.5,kappa,-0.03204476077112817,0.01236931346639189,-2.590666075218771,0.792
+High Dim,sample,dropout,DCT lam=1.5,agree,-0.015483483483483274,0.006101966826140293,-2.537457827065428,0.943
+High Dim,sample,dropout,DCT lam=1.5,kappa,-0.031160994765210004,0.012481885341771632,-2.4964974370440043,0.943
+High Dim,sample,dropout,DCT lam=5,agree,-0.003858858858858838,0.004931802354757055,-0.7824439386012112,0.79
+High Dim,sample,dropout,DCT lam=5,kappa,-0.00691861132394217,0.009973844660457086,-0.6936754641238919,0.79
+High Dim,sample,dropout,DCT lam=15,agree,,0.005041589679415251,,0.506
+High Dim,sample,dropout,DCT lam=15,kappa,,0.010079162402678908,,0.506
+High Dim,sample,dropout,"DCT lam=5, 2 passes",agree,,,,0.322
+High Dim,sample,dropout,"DCT lam=5, 2 passes",kappa,,,,0.322
+High Dim,sample,dropout,bagging-5,agree,-0.012156156156156062,0.005745583788904829,-2.1157390794005213,0.995
+High Dim,sample,dropout,bagging-5,kappa,-0.0251669802357527,0.011647410296089374,-2.1607361289747415,0.995
+High Dim,sample,dropout,seed-ens-5,agree,,,,0.0
+High Dim,sample,dropout,seed-ens-5,kappa,,,,0.0
+High Dim,sample,wd,DCT lam=0.5,agree,-0.03078746770025853,0.006682635234323687,-4.607084873064205,1.0
+High Dim,sample,wd,DCT lam=0.5,kappa,-0.06556944957149974,0.013555718364836631,-4.8370324468813175,1.0
+High Dim,sample,wd,DCT lam=1.5,agree,-0.028976098191214383,0.007135709433194806,-4.060717222651985,1.0
+High Dim,sample,wd,DCT lam=1.5,kappa,-0.062257287049960364,0.014330973480185697,-4.344246895442141,1.0
+High Dim,sample,wd,DCT lam=5,agree,-0.018785529715762195,0.006259360197950452,-3.0011900772084146,1.0
+High Dim,sample,wd,DCT lam=5,kappa,-0.040876942359245994,0.01252319972175094,-3.2640972968153505,1.0
+High Dim,sample,wd,DCT lam=15,agree,-0.009265503875968917,0.004500355208715378,-2.0588383463654965,1.0
+High Dim,sample,wd,DCT lam=15,kappa,-0.02160927449672123,0.009065871228210917,-2.383584980721777,1.0
+High Dim,sample,wd,"DCT lam=5, 2 passes",agree,-0.016992248062015602,0.006222751501556401,-2.7306647321149806,1.0
+High Dim,sample,wd,"DCT lam=5, 2 passes",kappa,-0.036119529347487356,0.012310515867031673,-2.9340386493646218,1.0
+High Dim,sample,wd,bagging-5,agree,-0.02286757105943138,0.006914044107239437,-3.307408906386293,1.0
+High Dim,sample,wd,bagging-5,kappa,-0.05071265191336838,0.013479900179521317,-3.762094024287443,1.0
+High Dim,sample,wd,seed-ens-5,agree,-0.005791343669250826,0.004550726973679643,-1.2726194523966443,0.805
+High Dim,sample,wd,seed-ens-5,kappa,-0.012859077045761558,0.008918387528190215,-1.4418612114707037,0.805
+High Dim,sample,single-pass,DCT lam=0.5,agree,-0.03078746770025853,0.006946802063621036,-4.431890734513097,1.0
+High Dim,sample,single-pass,DCT lam=0.5,kappa,-0.06556944957149974,0.01462216503509367,-4.484250411216871,1.0
+High Dim,sample,single-pass,DCT lam=1.5,agree,-0.028976098191214383,0.007378270519812877,-3.9272208999934115,1.0
+High Dim,sample,single-pass,DCT lam=1.5,kappa,-0.062257287049960364,0.01547837415690038,-4.022211016407404,1.0
+High Dim,sample,single-pass,DCT lam=5,agree,-0.018785529715762195,0.0064296844583179285,-2.9216876562985616,1.0
+High Dim,sample,single-pass,DCT lam=5,kappa,-0.040876942359245994,0.013481326215733216,-3.032115810055917,1.0
+High Dim,sample,single-pass,DCT lam=15,agree,-0.009265503875968917,0.004699564496695805,-1.9715664892956266,1.0
+High Dim,sample,single-pass,DCT lam=15,kappa,-0.02160927449672123,0.00992930038695233,-2.176313904765844,1.0
+High Dim,sample,single-pass,"DCT lam=5, 2 passes",agree,-0.016992248062015602,0.006287376568401054,-2.7025974787982054,1.0
+High Dim,sample,single-pass,"DCT lam=5, 2 passes",kappa,-0.036119529347487356,0.012785861505376356,-2.8249585944833964,1.0
+High Dim,sample,single-pass,bagging-5,agree,-0.02286757105943138,0.0070955892555298545,-3.2227867532791357,1.0
+High Dim,sample,single-pass,bagging-5,kappa,-0.05071265191336838,0.01478193671059446,-3.4307177000035303,1.0
+High Dim,sample,single-pass,seed-ens-5,agree,-0.005791343669250826,0.004577843453440634,-1.2650811955787051,0.805
+High Dim,sample,single-pass,seed-ens-5,kappa,-0.012859077045761558,0.009053115430827915,-1.4204035223027731,0.805
+High Dim,seed,dropout,DCT lam=0.5,agree,-0.006145087235996605,0.005716590398694804,-1.0749567150026411,0.667
+High Dim,seed,dropout,DCT lam=0.5,kappa,-0.012792387917120451,0.011391905062933591,-1.1229366683140365,0.667
+High Dim,seed,dropout,DCT lam=1.5,agree,-0.004112029384757077,0.005375866122732539,-0.7649054665570694,0.697
+High Dim,seed,dropout,DCT lam=1.5,kappa,-0.008442534866399898,0.010732664376238332,-0.7866205976860057,0.697
+High Dim,seed,dropout,DCT lam=5,agree,0.0019210284664834543,0.006203540016866823,0.3096664906263786,0.755
+High Dim,seed,dropout,DCT lam=5,kappa,0.003629887019940714,0.012316332627321127,0.29472141828068144,0.755
+High Dim,seed,dropout,DCT lam=15,agree,,,,0.409
+High Dim,seed,dropout,DCT lam=15,kappa,,,,0.409
+High Dim,seed,dropout,"DCT lam=5, 2 passes",agree,,,,0.264
+High Dim,seed,dropout,"DCT lam=5, 2 passes",kappa,,,,0.264
+High Dim,seed,dropout,bagging-5,agree,-0.012708907254362134,0.006001005289375094,-2.1177963760277834,0.954
+High Dim,seed,dropout,bagging-5,kappa,-0.0260758874787268,0.011933129391640894,-2.185167580349279,0.954
+High Dim,seed,dropout,seed-ens-5,agree,,,,0.0
+High Dim,seed,dropout,seed-ens-5,kappa,,,,0.0
+High Dim,seed,wd,DCT lam=0.5,agree,-0.06411111111111123,0.0037083526095690444,-17.288299647039693,1.0
+High Dim,seed,wd,DCT lam=0.5,kappa,-0.1297455483464124,0.007573430185656131,-17.13167549786712,1.0
+High Dim,seed,wd,DCT lam=1.5,agree,-0.06144444444444419,0.004077414597049995,-15.069462028438114,1.0
+High Dim,seed,wd,DCT lam=1.5,kappa,-0.12415138638004497,0.00830743682336986,-14.944607948241217,1.0
+High Dim,seed,wd,DCT lam=5,agree,-0.05477777777777715,0.003859130813734664,-14.194330387252691,1.0
+High Dim,seed,wd,DCT lam=5,kappa,-0.1108346555780595,0.007883515953174117,-14.059038661986149,1.0
+High Dim,seed,wd,DCT lam=15,agree,-0.03777777777777769,0.0031309862740939412,-12.065775596129047,1.0
+High Dim,seed,wd,DCT lam=15,kappa,-0.0765292437653553,0.006459238661381814,-11.848028502632156,1.0
+High Dim,seed,wd,"DCT lam=5, 2 passes",agree,-0.04933333333333334,0.0033468299097590025,-14.740316856103906,1.0
+High Dim,seed,wd,"DCT lam=5, 2 passes",kappa,-0.09975266791499748,0.006799112706522223,-14.671424378552686,1.0
+High Dim,seed,wd,bagging-5,agree,-0.0644444444444442,0.0036592302232844433,-17.611475778258164,1.0
+High Dim,seed,wd,bagging-5,kappa,-0.1307933435708336,0.007451179589156351,-17.553374201472238,1.0
+High Dim,seed,wd,seed-ens-5,agree,-0.0030000000000000027,0.0034218997185960836,-0.876705995706626,0.878
+High Dim,seed,wd,seed-ens-5,kappa,-0.006064682835984936,0.006912163674888547,-0.8773928282424134,0.878
+High Dim,seed,single-pass,DCT lam=0.5,agree,-0.06411111111111123,0.0037083526095690444,-17.288299647039693,1.0
+High Dim,seed,single-pass,DCT lam=0.5,kappa,-0.1297455483464124,0.007573430185656131,-17.13167549786712,1.0
+High Dim,seed,single-pass,DCT lam=1.5,agree,-0.06144444444444419,0.004077414597049995,-15.069462028438114,1.0
+High Dim,seed,single-pass,DCT lam=1.5,kappa,-0.12415138638004497,0.00830743682336986,-14.944607948241217,1.0
+High Dim,seed,single-pass,DCT lam=5,agree,-0.05477777777777715,0.003859130813734664,-14.194330387252691,1.0
+High Dim,seed,single-pass,DCT lam=5,kappa,-0.1108346555780595,0.007883515953174117,-14.059038661986149,1.0
+High Dim,seed,single-pass,DCT lam=15,agree,-0.03777777777777769,0.0031309862740939412,-12.065775596129047,1.0
+High Dim,seed,single-pass,DCT lam=15,kappa,-0.0765292437653553,0.006459238661381814,-11.848028502632156,1.0
+High Dim,seed,single-pass,"DCT lam=5, 2 passes",agree,-0.04933333333333334,0.0033468299097590025,-14.740316856103906,1.0
+High Dim,seed,single-pass,"DCT lam=5, 2 passes",kappa,-0.09975266791499748,0.006799112706522223,-14.671424378552686,1.0
+High Dim,seed,single-pass,bagging-5,agree,-0.0644444444444442,0.0036592302232844433,-17.611475778258164,1.0
+High Dim,seed,single-pass,bagging-5,kappa,-0.1307933435708336,0.007451179589156351,-17.553374201472238,1.0
+High Dim,seed,single-pass,seed-ens-5,agree,-0.0030000000000000027,0.0034218997185960836,-0.876705995706626,0.878
+High Dim,seed,single-pass,seed-ens-5,kappa,-0.006064682835984936,0.006912163674888547,-0.8773928282424134,0.878
+High Noise,sample,dropout,DCT lam=0.5,agree,,,,0.0
+High Noise,sample,dropout,DCT lam=0.5,kappa,,,,0.0
+High Noise,sample,dropout,DCT lam=1.5,agree,,,,0.0
+High Noise,sample,dropout,DCT lam=1.5,kappa,,,,0.0
+High Noise,sample,dropout,DCT lam=5,agree,,,,0.023
+High Noise,sample,dropout,DCT lam=5,kappa,,,,0.023
+High Noise,sample,dropout,DCT lam=15,agree,0.0024466188301803804,0.005441993110052783,0.44958139062337954,1.0
+High Noise,sample,dropout,DCT lam=15,kappa,0.004692195029221136,0.010708612097625273,0.4381702303197321,1.0
+High Noise,sample,dropout,"DCT lam=5, 2 passes",agree,0.01999826049141107,0.005728230605496274,3.4911758741386234,0.83
+High Noise,sample,dropout,"DCT lam=5, 2 passes",kappa,0.0393000024878416,0.011422289309225536,3.4406414882259932,0.83
+High Noise,sample,dropout,bagging-5,agree,0.0014916286149168068,0.006474301622727481,0.23039220318073728,0.83
+High Noise,sample,dropout,bagging-5,kappa,0.002561574933713673,0.012898634125715507,0.19859272762894795,0.83
+High Noise,sample,dropout,seed-ens-5,agree,,,,0.0
+High Noise,sample,dropout,seed-ens-5,kappa,,,,0.0
+High Noise,sample,wd,DCT lam=0.5,agree,,,,0.015
+High Noise,sample,wd,DCT lam=0.5,kappa,,,,0.018
+High Noise,sample,wd,DCT lam=1.5,agree,,,,0.001
+High Noise,sample,wd,DCT lam=1.5,kappa,,,,0.003
+High Noise,sample,wd,DCT lam=5,agree,,,,0.173
+High Noise,sample,wd,DCT lam=5,kappa,,,,0.163
+High Noise,sample,wd,DCT lam=15,agree,-0.0011814503579210545,0.004915799037780103,-0.2403373996457306,1.0
+High Noise,sample,wd,DCT lam=15,kappa,-0.0028495951159099864,0.010023971438774846,-0.28427805618910174,1.0
+High Noise,sample,wd,"DCT lam=5, 2 passes",agree,0.006367050523913176,0.003838748887052758,1.6586264721268469,0.995
+High Noise,sample,wd,"DCT lam=5, 2 passes",kappa,0.012992909022792043,0.007968119689212143,1.6306116787355551,0.985
+High Noise,sample,wd,bagging-5,agree,-0.011668845315904064,0.0049851332210181926,-2.3407288829727104,0.978
+High Noise,sample,wd,bagging-5,kappa,-0.023033361510697348,0.010186060094975663,-2.2612630689326774,0.979
+High Noise,sample,wd,seed-ens-5,agree,,,,0.0
+High Noise,sample,wd,seed-ens-5,kappa,,,,0.0
+High Noise,sample,single-pass,DCT lam=0.5,agree,,,,0.015
+High Noise,sample,single-pass,DCT lam=0.5,kappa,,,,0.018
+High Noise,sample,single-pass,DCT lam=1.5,agree,,,,0.001
+High Noise,sample,single-pass,DCT lam=1.5,kappa,,,,0.003
+High Noise,sample,single-pass,DCT lam=5,agree,,,,0.173
+High Noise,sample,single-pass,DCT lam=5,kappa,,,,0.163
+High Noise,sample,single-pass,DCT lam=15,agree,0.0016774650380596556,0.0049380240291185,0.3397037009475842,1.0
+High Noise,sample,single-pass,DCT lam=15,kappa,0.002671716764624854,0.00992709057278684,0.26913391643155127,1.0
+High Noise,sample,single-pass,"DCT lam=5, 2 passes",agree,0.00734218445742596,0.003641154419400835,2.0164441305497123,0.995
+High Noise,sample,single-pass,"DCT lam=5, 2 passes",kappa,0.01489295562135673,0.007405206370112711,2.0111466010541514,0.986
+High Noise,sample,single-pass,bagging-5,agree,-0.010605062842981128,0.005026936512757924,-2.1096472605266463,0.978
+High Noise,sample,single-pass,bagging-5,kappa,-0.021222728869712437,0.010167661289090487,-2.087277326250395,0.979
+High Noise,sample,single-pass,seed-ens-5,agree,,,,0.0
+High Noise,sample,single-pass,seed-ens-5,kappa,,,,0.0
+High Noise,seed,dropout,DCT lam=0.5,agree,,,,0.0
+High Noise,seed,dropout,DCT lam=0.5,kappa,,,,0.0
+High Noise,seed,dropout,DCT lam=1.5,agree,,,,0.0
+High Noise,seed,dropout,DCT lam=1.5,kappa,,,,0.0
+High Noise,seed,dropout,DCT lam=5,agree,,,,0.0
+High Noise,seed,dropout,DCT lam=5,kappa,,,,0.0
+High Noise,seed,dropout,DCT lam=15,agree,0.014349206349206445,0.0038003071135575997,3.7758017761289966,0.998
+High Noise,seed,dropout,DCT lam=15,kappa,0.02853714768718829,0.007659234079840004,3.7258487454119447,0.998
+High Noise,seed,dropout,"DCT lam=5, 2 passes",agree,,0.0038043075141690626,,0.549
+High Noise,seed,dropout,"DCT lam=5, 2 passes",kappa,,0.007613092704815986,,0.549
+High Noise,seed,dropout,bagging-5,agree,-0.007759499759499855,0.004287612114660366,-1.8097485388121466,0.874
+High Noise,seed,dropout,bagging-5,kappa,-0.015497194844186546,0.008560961868815189,-1.8102165482873842,0.874
+High Noise,seed,dropout,seed-ens-5,agree,,,,0.0
+High Noise,seed,dropout,seed-ens-5,kappa,,,,0.0
+High Noise,seed,wd,DCT lam=0.5,agree,,,,0.022
+High Noise,seed,wd,DCT lam=0.5,kappa,,,,0.011
+High Noise,seed,wd,DCT lam=1.5,agree,,,,0.0
+High Noise,seed,wd,DCT lam=1.5,kappa,,,,0.0
+High Noise,seed,wd,DCT lam=5,agree,,,,0.01
+High Noise,seed,wd,DCT lam=5,kappa,,,,0.019
+High Noise,seed,wd,DCT lam=15,agree,-0.015828238719068688,0.0035487434430309657,-4.460237538487669,1.0
+High Noise,seed,wd,DCT lam=15,kappa,-0.029797950407128626,0.007414186904679274,-4.019044945889132,1.0
+High Noise,seed,wd,"DCT lam=5, 2 passes",agree,-0.012504886670825277,0.004249284817153613,-2.9428214885350252,0.938
+High Noise,seed,wd,"DCT lam=5, 2 passes",kappa,-0.02314093112993143,0.009124996724553646,-2.5359933628977145,0.91
+High Noise,seed,wd,bagging-5,agree,-0.0367036805988773,0.0047878474018920765,-7.666008859090334,0.995
+High Noise,seed,wd,bagging-5,kappa,-0.06911570247362564,0.009647765640668946,-7.163907690945256,0.974
+High Noise,seed,wd,seed-ens-5,agree,,,,0.0
+High Noise,seed,wd,seed-ens-5,kappa,,,,0.001
+High Noise,seed,single-pass,DCT lam=0.5,agree,,,,0.022
+High Noise,seed,single-pass,DCT lam=0.5,kappa,,,,0.011
+High Noise,seed,single-pass,DCT lam=1.5,agree,,,,0.0
+High Noise,seed,single-pass,DCT lam=1.5,kappa,,,,0.0
+High Noise,seed,single-pass,DCT lam=5,agree,,,,0.01
+High Noise,seed,single-pass,DCT lam=5,kappa,,,,0.019
+High Noise,seed,single-pass,DCT lam=15,agree,-0.015828238719068688,0.0035487434430309657,-4.460237538487669,1.0
+High Noise,seed,single-pass,DCT lam=15,kappa,-0.029797950407128626,0.007414186904679274,-4.019044945889132,1.0
+High Noise,seed,single-pass,"DCT lam=5, 2 passes",agree,-0.012504886670825277,0.004349988257738914,-2.874694350859054,0.94
+High Noise,seed,single-pass,"DCT lam=5, 2 passes",kappa,-0.02314093112993143,0.009203293835596699,-2.5144183749112123,0.911
+High Noise,seed,single-pass,bagging-5,agree,-0.0367036805988773,0.0047878474018920765,-7.666008859090334,0.995
+High Noise,seed,single-pass,bagging-5,kappa,-0.06911570247362564,0.009647765640668946,-7.163907690945256,0.974
+High Noise,seed,single-pass,seed-ens-5,agree,,,,0.0
+High Noise,seed,single-pass,seed-ens-5,kappa,,,,0.001
+Small Sample,sample,dropout,DCT lam=0.5,agree,,,,0.23
+Small Sample,sample,dropout,DCT lam=0.5,kappa,,,,0.23
+Small Sample,sample,dropout,DCT lam=1.5,agree,,,,0.032
+Small Sample,sample,dropout,DCT lam=1.5,kappa,,,,0.032
+Small Sample,sample,dropout,DCT lam=5,agree,,,,0.032
+Small Sample,sample,dropout,DCT lam=5,kappa,,,,0.032
+Small Sample,sample,dropout,DCT lam=15,agree,,0.00837876514975577,,0.521
+Small Sample,sample,dropout,DCT lam=15,kappa,,0.01658100448332751,,0.521
+Small Sample,sample,dropout,"DCT lam=5, 2 passes",agree,,,,0.16
+Small Sample,sample,dropout,"DCT lam=5, 2 passes",kappa,,,,0.16
+Small Sample,sample,dropout,bagging-5,agree,-0.01866666666666661,0.005243343936102996,-3.5600690883803083,1.0
+Small Sample,sample,dropout,bagging-5,kappa,-0.03616195461699678,0.010349582468069354,-3.494049612973668,1.0
+Small Sample,sample,dropout,seed-ens-5,agree,,,,0.015
+Small Sample,sample,dropout,seed-ens-5,kappa,,,,0.015
+Small Sample,sample,wd,DCT lam=0.5,agree,,,,0.147
+Small Sample,sample,wd,DCT lam=0.5,kappa,,,,0.147
+Small Sample,sample,wd,DCT lam=1.5,agree,,,,0.004
+Small Sample,sample,wd,DCT lam=1.5,kappa,,,,0.004
+Small Sample,sample,wd,DCT lam=5,agree,,,,0.012
+Small Sample,sample,wd,DCT lam=5,kappa,,,,0.012
+Small Sample,sample,wd,DCT lam=15,agree,,,,0.438
+Small Sample,sample,wd,DCT lam=15,kappa,,,,0.438
+Small Sample,sample,wd,"DCT lam=5, 2 passes",agree,,,,0.114
+Small Sample,sample,wd,"DCT lam=5, 2 passes",kappa,,,,0.114
+Small Sample,sample,wd,bagging-5,agree,-0.033166666666666345,0.007009151639594541,-4.731908848898144,0.998
+Small Sample,sample,wd,bagging-5,kappa,-0.06540177110360423,0.013927669031151363,-4.695816001753284,0.998
+Small Sample,sample,wd,seed-ens-5,agree,,,,0.006
+Small Sample,sample,wd,seed-ens-5,kappa,,,,0.006
+Small Sample,sample,single-pass,DCT lam=0.5,agree,,,,0.308
+Small Sample,sample,single-pass,DCT lam=0.5,kappa,,,,0.308
+Small Sample,sample,single-pass,DCT lam=1.5,agree,,,,0.034
+Small Sample,sample,single-pass,DCT lam=1.5,kappa,,,,0.034
+Small Sample,sample,single-pass,DCT lam=5,agree,,,,0.037
+Small Sample,sample,single-pass,DCT lam=5,kappa,,,,0.037
+Small Sample,sample,single-pass,DCT lam=15,agree,,0.00911236438212426,,0.589
+Small Sample,sample,single-pass,DCT lam=15,kappa,,0.01815591352776679,,0.589
+Small Sample,sample,single-pass,"DCT lam=5, 2 passes",agree,,,,0.217
+Small Sample,sample,single-pass,"DCT lam=5, 2 passes",kappa,,,,0.217
+Small Sample,sample,single-pass,bagging-5,agree,-0.033166666666666345,0.006141664988358598,-5.400272846130991,1.0
+Small Sample,sample,single-pass,bagging-5,kappa,-0.06540177110360423,0.01219617757750141,-5.362481046869348,1.0
+Small Sample,sample,single-pass,seed-ens-5,agree,,,,0.018
+Small Sample,sample,single-pass,seed-ens-5,kappa,,,,0.018
+Small Sample,seed,dropout,DCT lam=0.5,agree,,,,0.051
+Small Sample,seed,dropout,DCT lam=0.5,kappa,,,,0.051
+Small Sample,seed,dropout,DCT lam=1.5,agree,,,,0.012
+Small Sample,seed,dropout,DCT lam=1.5,kappa,,,,0.012
+Small Sample,seed,dropout,DCT lam=5,agree,,,,0.0
+Small Sample,seed,dropout,DCT lam=5,kappa,,,,0.0
+Small Sample,seed,dropout,DCT lam=15,agree,,,,0.066
+Small Sample,seed,dropout,DCT lam=15,kappa,,,,0.066
+Small Sample,seed,dropout,"DCT lam=5, 2 passes",agree,,,,0.029
+Small Sample,seed,dropout,"DCT lam=5, 2 passes",kappa,,,,0.029
+Small Sample,seed,dropout,bagging-5,agree,-0.009666666666666823,0.00389149408924805,-2.4840501989647645,0.96
+Small Sample,seed,dropout,bagging-5,kappa,-0.01925671542574181,0.007834205283892365,-2.4580304865555247,0.96
+Small Sample,seed,dropout,seed-ens-5,agree,,,,0.011
+Small Sample,seed,dropout,seed-ens-5,kappa,,,,0.011
+Small Sample,seed,wd,DCT lam=0.5,agree,,,,0.094
+Small Sample,seed,wd,DCT lam=0.5,kappa,,,,0.094
+Small Sample,seed,wd,DCT lam=1.5,agree,,,,0.031
+Small Sample,seed,wd,DCT lam=1.5,kappa,,,,0.031
+Small Sample,seed,wd,DCT lam=5,agree,,,,0.0
+Small Sample,seed,wd,DCT lam=5,kappa,,,,0.0
+Small Sample,seed,wd,DCT lam=15,agree,,,,0.111
+Small Sample,seed,wd,DCT lam=15,kappa,,,,0.111
+Small Sample,seed,wd,"DCT lam=5, 2 passes",agree,,,,0.057
+Small Sample,seed,wd,"DCT lam=5, 2 passes",kappa,,,,0.057
+Small Sample,seed,wd,bagging-5,agree,-0.03338814814814839,0.004821871706119141,-6.9243128359839075,0.979
+Small Sample,seed,wd,bagging-5,kappa,-0.06739910865308862,0.00970273458596971,-6.946403413997192,0.979
+Small Sample,seed,wd,seed-ens-5,agree,,,,0.026
+Small Sample,seed,wd,seed-ens-5,kappa,,,,0.026
+Small Sample,seed,single-pass,DCT lam=0.5,agree,,,,0.106
+Small Sample,seed,single-pass,DCT lam=0.5,kappa,,,,0.106
+Small Sample,seed,single-pass,DCT lam=1.5,agree,,,,0.038
+Small Sample,seed,single-pass,DCT lam=1.5,kappa,,,,0.038
+Small Sample,seed,single-pass,DCT lam=5,agree,,,,0.0
+Small Sample,seed,single-pass,DCT lam=5,kappa,,,,0.0
+Small Sample,seed,single-pass,DCT lam=15,agree,,,,0.13
+Small Sample,seed,single-pass,DCT lam=15,kappa,,,,0.13
+Small Sample,seed,single-pass,"DCT lam=5, 2 passes",agree,,,,0.069
+Small Sample,seed,single-pass,"DCT lam=5, 2 passes",kappa,,,,0.069
+Small Sample,seed,single-pass,bagging-5,agree,-0.03338814814814839,0.005086435464516464,-6.564154481280221,0.985
+Small Sample,seed,single-pass,bagging-5,kappa,-0.06739910865308862,0.010240537400425942,-6.5815987987393365,0.985
+Small Sample,seed,single-pass,seed-ens-5,agree,,,,0.029
+Small Sample,seed,single-pass,seed-ens-5,kappa,,,,0.029

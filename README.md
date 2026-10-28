@@ -121,6 +121,16 @@ The rungs of the ladder, by how directly each attacks sample variance: (1) more 
 | bottom, 300 | -20.4 ± 1.1 | -23.5 ± 1.1 | 0.73 | +0.0 |
 | top, 100 | +0.1 ± 0.2 | -0.1 ± 0.2 | 0.73 | +0.3 |
 | top, 300 | +0.0 ± 0.1 | +0.0 ± 0.1 | 0.69 | +0.0 |
+
+**Table 6. Protocol check: fixed 30 epochs, no validation split (the original protocol).** Δ accuracy / Δ agreement vs `standard`, points.
+
+| Arm | Adult (3k) | Breast Cancer | High Noise | Small Sample | High Dim |
+|---|---|---|---|---|---|
+| `dropout=0.5` | +0.6 ± 0.1 / +2.0 ± 0.2 | +0.0 ± 0.1 / +0.4 ± 0.1 | -1.0 ± 0.2 / +1.6 ± 0.4 | +0.1 ± 0.2 / +1.4 ± 0.4 | +0.1 ± 0.2 / +1.2 ± 0.4 |
+| `wd=10` | +1.3 ± 0.1 / +7.7 ± 0.3 | +0.3 ± 0.1 / +0.9 ± 0.2 | -1.9 ± 0.2 / +2.3 ± 0.6 | -0.2 ± 0.2 / +2.9 ± 0.5 | +1.1 ± 0.3 / +2.4 ± 0.5 |
+| `DCT lam=5` | +0.6 ± 0.1 / +1.9 ± 0.2 | +0.0 ± 0.1 / -0.0 ± 0.1 | +0.5 ± 0.2 / +2.1 ± 0.4 | +0.5 ± 0.2 / +1.3 ± 0.3 | +0.0 ± 0.2 / +0.9 ± 0.4 |
+| `DCT lam=15` | +1.0 ± 0.1 / +3.2 ± 0.2 | +0.1 ± 0.1 / +0.3 ± 0.1 | -1.0 ± 0.2 / +1.8 ± 0.6 | +0.2 ± 0.2 / +2.7 ± 0.5 | +0.1 ± 0.3 / +1.8 ± 0.4 |
+| `seed-ens-5` | +0.4 ± 0.1 / +1.2 ± 0.2 | -0.0 ± 0.1 / +0.0 ± 0.1 | +1.0 ± 0.2 / +2.4 ± 0.4 | +0.5 ± 0.2 / +1.0 ± 0.2 | +0.9 ± 0.2 / +1.9 ± 0.4 |
 <!-- tables:end -->
 
 ### What the tests say
@@ -131,7 +141,7 @@ The rungs of the ladder, by how directly each attacks sample variance: (1) more 
 - **Point 6, overconfidence: holds in direction, not as an identity.** The vote ensemble here is far from calibrated: on Adult, two models disagree on 7% of points but each is wrong on 17%, so the thirty models mostly share their mistakes (bias, not variance). Across arms, each point of agreement gained comes with about half a point of added vote overconfidence (panel b, slope 0.5). The clean "disagreement equals error" identity needs a regime with more variance than bias than these small problems have.
 - **Point 4, targeting: the penalty acts where the vote is uncertain, and nowhere else.** At baseline, mask variance predicts across-sample variance well (Spearman 0.54 to 0.94 on the logit scale), so Σ_m is not useless as a map of where the fit varies. But DCT's variance reduction is *negatively* correlated with baseline mask variance on four of five datasets (−0.2 to −0.8; panel c), while weight decay's is positively correlated (0.5 to 0.9). That is the [p(1−p)]² weighting from point 3: DCT switches off on confident points, which are exactly where mask variance is largest, and if anything pushes their logits further out. Weight decay shrinks everywhere, including there.
 - **Price in data.** Agreement rises by 1.3 (Adult) to 10 (High Noise) points per doubling of the training data. Weight decay 10 is worth 2.3× the data on Adult and 1.1 to 1.5× elsewhere; DCT λ=5 is worth 1.1× on High Noise and less than 1× on Adult (`results/data_equivalents.csv`).
-- **Protocol.** With a fixed budget of 30 epochs and no validation split (the original protocol) DCT and dropout 0.5 both gained 1 to 2 points on the earlier run. Early stopping is itself a rung-2 regularizer, and once it is in place the other shrinkage methods have less to add; Table 6 reports the fixed-epoch run for comparison.
+- **Protocol does not change the ranking.** Under the original fixed budget of 30 epochs with no validation split (Table 6), DCT λ=5 gains 0.9 to 2.1 points of agreement and dropout 0.5 gains 1.2 to 2.0, the earlier finding. Weight decay 10 gains 2.3 to 7.7. Early stopping is itself a rung-2 regularizer; with it in place every shrinkage method has less to add, but the order is the same.
 
 ![Mechanism](results/mechanism.png)
 
