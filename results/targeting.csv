@@ -1,0 +1,206 @@
+dataset,arm,bin,stat,value
+High Noise,standard,all,"rho(Var_S, Var_m)",0.8705656717083678
+High Noise,standard,0,"rho(Var_S, Var_m)",0.7281362751743895
+High Noise,standard,1,"rho(Var_S, Var_m)",0.7667446589840591
+High Noise,standard,2,"rho(Var_S, Var_m)",0.8047363932562158
+High Noise,standard,3,"rho(Var_S, Var_m)",0.721987273403162
+High Noise,standard,4,"rho(Var_S, Var_m)",0.7522293411471432
+High Noise,DCT lam=5,all,"rho(reduction, Var_m0)",-0.32266393546575745
+High Noise,DCT lam=5,all,mean log reduction,-0.12455982714891434
+High Noise,DCT lam=5,0,"rho(reduction, Var_m0)",-0.2460519122695765
+High Noise,DCT lam=5,1,"rho(reduction, Var_m0)",-0.0860379173864556
+High Noise,DCT lam=5,2,"rho(reduction, Var_m0)",0.08567492510550831
+High Noise,DCT lam=5,3,"rho(reduction, Var_m0)",-0.015416238437821176
+High Noise,DCT lam=5,4,"rho(reduction, Var_m0)",-0.06771774070105618
+High Noise,DCT lam=15,all,"rho(reduction, Var_m0)",-0.42946229919419654
+High Noise,DCT lam=15,all,mean log reduction,0.19783538579940796
+High Noise,DCT lam=15,0,"rho(reduction, Var_m0)",-0.3244451247512629
+High Noise,DCT lam=15,1,"rho(reduction, Var_m0)",-0.15193194988082484
+High Noise,DCT lam=15,2,"rho(reduction, Var_m0)",0.055975159082460486
+High Noise,DCT lam=15,3,"rho(reduction, Var_m0)",0.07517876276486411
+High Noise,DCT lam=15,4,"rho(reduction, Var_m0)",0.11828300277710962
+High Noise,dropout=0.5,all,"rho(reduction, Var_m0)",-0.17654425533813042
+High Noise,dropout=0.5,all,mean log reduction,0.1951300948858261
+High Noise,dropout=0.5,0,"rho(reduction, Var_m0)",-0.07377490105180295
+High Noise,dropout=0.5,1,"rho(reduction, Var_m0)",-0.08085106382978724
+High Noise,dropout=0.5,2,"rho(reduction, Var_m0)",0.025505674487765414
+High Noise,dropout=0.5,3,"rho(reduction, Var_m0)",-0.04422820406288952
+High Noise,dropout=0.5,4,"rho(reduction, Var_m0)",-0.008873630578819621
+High Noise,dropout=0.7,all,"rho(reduction, Var_m0)",-0.3031891202110325
+High Noise,dropout=0.7,all,mean log reduction,0.742090106010437
+High Noise,dropout=0.7,0,"rho(reduction, Var_m0)",-0.16998534910673285
+High Noise,dropout=0.7,1,"rho(reduction, Var_m0)",-0.118191161356629
+High Noise,dropout=0.7,2,"rho(reduction, Var_m0)",0.10808860510375895
+High Noise,dropout=0.7,3,"rho(reduction, Var_m0)",0.04893835691325361
+High Noise,dropout=0.7,4,"rho(reduction, Var_m0)",0.11227832323806611
+High Noise,wd=10,all,"rho(reduction, Var_m0)",0.22377635173016386
+High Noise,wd=10,all,mean log reduction,1.8686723709106445
+High Noise,wd=10,0,"rho(reduction, Var_m0)",-0.05175045374035119
+High Noise,wd=10,1,"rho(reduction, Var_m0)",0.06903413439461198
+High Noise,wd=10,2,"rho(reduction, Var_m0)",0.09067372242024012
+High Noise,wd=10,3,"rho(reduction, Var_m0)",0.18433885110756382
+High Noise,wd=10,4,"rho(reduction, Var_m0)",0.2761277907764974
+Small Sample,standard,all,"rho(Var_S, Var_m)",0.8705034406465039
+Small Sample,standard,0,"rho(Var_S, Var_m)",0.7894045944678857
+Small Sample,standard,1,"rho(Var_S, Var_m)",0.7497655883731834
+Small Sample,standard,2,"rho(Var_S, Var_m)",0.7126347866854197
+Small Sample,standard,3,"rho(Var_S, Var_m)",0.7201593999062355
+Small Sample,standard,4,"rho(Var_S, Var_m)",0.8538209095171122
+Small Sample,DCT lam=5,all,"rho(reduction, Var_m0)",-0.263817711360696
+Small Sample,DCT lam=5,all,mean log reduction,-0.21373134851455688
+Small Sample,DCT lam=5,0,"rho(reduction, Var_m0)",-0.005954055321143928
+Small Sample,DCT lam=5,1,"rho(reduction, Var_m0)",-0.17290201593999066
+Small Sample,DCT lam=5,2,"rho(reduction, Var_m0)",-0.16296296296296298
+Small Sample,DCT lam=5,3,"rho(reduction, Var_m0)",-0.06483825597749648
+Small Sample,DCT lam=5,4,"rho(reduction, Var_m0)",0.2645569620253165
+Small Sample,DCT lam=15,all,"rho(reduction, Var_m0)",-0.3717411358820992
+Small Sample,DCT lam=15,all,mean log reduction,-0.15790177881717682
+Small Sample,DCT lam=15,0,"rho(reduction, Var_m0)",-0.04786685419596812
+Small Sample,DCT lam=15,1,"rho(reduction, Var_m0)",-0.1609704641350211
+Small Sample,DCT lam=15,2,"rho(reduction, Var_m0)",-0.13870135958743554
+Small Sample,DCT lam=15,3,"rho(reduction, Var_m0)",-0.04756211908110643
+Small Sample,DCT lam=15,4,"rho(reduction, Var_m0)",0.08171589310829817
+Small Sample,dropout=0.5,all,"rho(reduction, Var_m0)",0.11227007668797928
+Small Sample,dropout=0.5,all,mean log reduction,0.3459182679653168
+Small Sample,dropout=0.5,0,"rho(reduction, Var_m0)",0.013408345053914675
+Small Sample,dropout=0.5,1,"rho(reduction, Var_m0)",-0.015635255508673233
+Small Sample,dropout=0.5,2,"rho(reduction, Var_m0)",-0.272808251289264
+Small Sample,dropout=0.5,3,"rho(reduction, Var_m0)",-0.0027191748710736056
+Small Sample,dropout=0.5,4,"rho(reduction, Var_m0)",-0.01211908110642288
+Small Sample,dropout=0.7,all,"rho(reduction, Var_m0)",-0.2479494871842949
+Small Sample,dropout=0.7,all,mean log reduction,0.557573676109314
+Small Sample,dropout=0.7,0,"rho(reduction, Var_m0)",-0.14212376933895923
+Small Sample,dropout=0.7,1,"rho(reduction, Var_m0)",-0.1261603375527426
+Small Sample,dropout=0.7,2,"rho(reduction, Var_m0)",0.003352086263478669
+Small Sample,dropout=0.7,3,"rho(reduction, Var_m0)",0.05768870135958744
+Small Sample,dropout=0.7,4,"rho(reduction, Var_m0)",-0.09282700421940929
+Small Sample,wd=10,all,"rho(reduction, Var_m0)",0.4918166988543678
+Small Sample,wd=10,all,mean log reduction,1.9042340517044067
+Small Sample,wd=10,0,"rho(reduction, Var_m0)",0.20921237693389594
+Small Sample,wd=10,1,"rho(reduction, Var_m0)",0.07128457571495546
+Small Sample,wd=10,2,"rho(reduction, Var_m0)",-0.2642053445850915
+Small Sample,wd=10,3,"rho(reduction, Var_m0)",0.02890295358649789
+Small Sample,wd=10,4,"rho(reduction, Var_m0)",0.2921237693389592
+High Dim,standard,all,"rho(Var_S, Var_m)",0.7339398164994901
+High Dim,standard,0,"rho(Var_S, Var_m)",0.7428432530036808
+High Dim,standard,1,"rho(Var_S, Var_m)",0.6783943329397873
+High Dim,standard,2,"rho(Var_S, Var_m)",0.5420723661365372
+High Dim,standard,3,"rho(Var_S, Var_m)",0.6197652614764914
+High Dim,standard,4,"rho(Var_S, Var_m)",0.7498298492950898
+High Dim,DCT lam=5,all,"rho(reduction, Var_m0)",0.048677524104233615
+High Dim,DCT lam=5,all,mean log reduction,0.05903301388025284
+High Dim,DCT lam=5,0,"rho(reduction, Var_m0)",0.23068268629765953
+High Dim,DCT lam=5,1,"rho(reduction, Var_m0)",-0.02747413014792693
+High Dim,DCT lam=5,2,"rho(reduction, Var_m0)",0.03028682547399125
+High Dim,DCT lam=5,3,"rho(reduction, Var_m0)",0.08789499270782693
+High Dim,DCT lam=5,4,"rho(reduction, Var_m0)",0.05344121119522189
+High Dim,DCT lam=15,all,"rho(reduction, Var_m0)",-0.12857835716210322
+High Dim,DCT lam=15,all,mean log reduction,0.23740819096565247
+High Dim,DCT lam=15,0,"rho(reduction, Var_m0)",-0.031641086186540726
+High Dim,DCT lam=15,1,"rho(reduction, Var_m0)",-0.000493089797902632
+High Dim,DCT lam=15,2,"rho(reduction, Var_m0)",-0.0064865615667754695
+High Dim,DCT lam=15,3,"rho(reduction, Var_m0)",-0.029321480658379053
+High Dim,DCT lam=15,4,"rho(reduction, Var_m0)",-0.3218904090561844
+High Dim,dropout=0.5,all,"rho(reduction, Var_m0)",0.015664599068330745
+High Dim,dropout=0.5,all,mean log reduction,0.0881781354546547
+High Dim,dropout=0.5,0,"rho(reduction, Var_m0)",0.17381068129731228
+High Dim,dropout=0.5,1,"rho(reduction, Var_m0)",0.005187860268074171
+High Dim,dropout=0.5,2,"rho(reduction, Var_m0)",0.01769567331064657
+High Dim,dropout=0.5,3,"rho(reduction, Var_m0)",0.11259115216334466
+High Dim,dropout=0.5,4,"rho(reduction, Var_m0)",-0.037578998541565385
+High Dim,dropout=0.7,all,"rho(reduction, Var_m0)",-0.058436551212642254
+High Dim,dropout=0.7,all,mean log reduction,0.3382328152656555
+High Dim,dropout=0.7,0,"rho(reduction, Var_m0)",0.0148343634974651
+High Dim,dropout=0.7,1,"rho(reduction, Var_m0)",0.07481075074657961
+High Dim,dropout=0.7,2,"rho(reduction, Var_m0)",0.06751857767900549
+High Dim,dropout=0.7,3,"rho(reduction, Var_m0)",0.07043544690603513
+High Dim,dropout=0.7,4,"rho(reduction, Var_m0)",0.03983609972914785
+High Dim,wd=10,all,"rho(reduction, Var_m0)",0.32423890066361294
+High Dim,wd=10,all,mean log reduction,0.3776997923851013
+High Dim,wd=10,0,"rho(reduction, Var_m0)",0.2574692686992152
+High Dim,wd=10,1,"rho(reduction, Var_m0)",0.16230988263073823
+High Dim,wd=10,2,"rho(reduction, Var_m0)",-0.04422529342315438
+High Dim,wd=10,3,"rho(reduction, Var_m0)",0.19788179734703795
+High Dim,wd=10,4,"rho(reduction, Var_m0)",0.2700118063754427
+Breast Cancer,standard,all,"rho(Var_S, Var_m)",0.5400562285934645
+Breast Cancer,standard,0,"rho(Var_S, Var_m)",0.8337255219618882
+Breast Cancer,standard,1,"rho(Var_S, Var_m)",0.6993823535367855
+Breast Cancer,standard,2,"rho(Var_S, Var_m)",0.6479057156164749
+Breast Cancer,standard,3,"rho(Var_S, Var_m)",0.37558170146412595
+Breast Cancer,standard,4,"rho(Var_S, Var_m)",-0.4661266479010146
+Breast Cancer,DCT lam=5,all,"rho(reduction, Var_m0)",0.17931768764469158
+Breast Cancer,DCT lam=5,all,mean log reduction,-0.014408520422875881
+Breast Cancer,DCT lam=5,0,"rho(reduction, Var_m0)",0.13021607500860657
+Breast Cancer,DCT lam=5,1,"rho(reduction, Var_m0)",0.1694133371134647
+Breast Cancer,DCT lam=5,2,"rho(reduction, Var_m0)",0.1595415529975381
+Breast Cancer,DCT lam=5,3,"rho(reduction, Var_m0)",0.013312812620238553
+Breast Cancer,DCT lam=5,4,"rho(reduction, Var_m0)",-0.42715619367773033
+Breast Cancer,DCT lam=15,all,"rho(reduction, Var_m0)",0.47865919036557714
+Breast Cancer,DCT lam=15,all,mean log reduction,-0.17777398228645325
+Breast Cancer,DCT lam=15,0,"rho(reduction, Var_m0)",0.11710171928474515
+Breast Cancer,DCT lam=15,1,"rho(reduction, Var_m0)",0.3646139203337317
+Breast Cancer,DCT lam=15,2,"rho(reduction, Var_m0)",0.4425693658926077
+Breast Cancer,DCT lam=15,3,"rho(reduction, Var_m0)",0.17693039833134205
+Breast Cancer,DCT lam=15,4,"rho(reduction, Var_m0)",-0.5357809683886515
+Breast Cancer,dropout=0.5,all,"rho(reduction, Var_m0)",-0.04736679256000344
+Breast Cancer,dropout=0.5,all,mean log reduction,-0.0011158031411468983
+Breast Cancer,dropout=0.5,0,"rho(reduction, Var_m0)",0.1144853283651607
+Breast Cancer,dropout=0.5,1,"rho(reduction, Var_m0)",0.11944270063384704
+Breast Cancer,dropout=0.5,2,"rho(reduction, Var_m0)",0.025850023288309272
+Breast Cancer,dropout=0.5,3,"rho(reduction, Var_m0)",0.22106073186043218
+Breast Cancer,dropout=0.5,4,"rho(reduction, Var_m0)",-0.3693282841578745
+Breast Cancer,dropout=0.7,all,"rho(reduction, Var_m0)",-0.38430445777058064
+Breast Cancer,dropout=0.7,all,mean log reduction,0.09804981201887131
+Breast Cancer,dropout=0.7,0,"rho(reduction, Var_m0)",0.15337477977359712
+Breast Cancer,dropout=0.7,1,"rho(reduction, Var_m0)",0.319649257811709
+Breast Cancer,dropout=0.7,2,"rho(reduction, Var_m0)",-0.09145651739969393
+Breast Cancer,dropout=0.7,3,"rho(reduction, Var_m0)",-0.29836981835118775
+Breast Cancer,dropout=0.7,4,"rho(reduction, Var_m0)",-0.7138818573945445
+Breast Cancer,wd=10,all,"rho(reduction, Var_m0)",-0.0539196514765217
+Breast Cancer,wd=10,all,mean log reduction,3.266737461090088
+Breast Cancer,wd=10,0,"rho(reduction, Var_m0)",0.40691359024726115
+Breast Cancer,wd=10,1,"rho(reduction, Var_m0)",0.2549523095927584
+Breast Cancer,wd=10,2,"rho(reduction, Var_m0)",0.0017549404484662988
+Breast Cancer,wd=10,3,"rho(reduction, Var_m0)",0.06304854093679756
+Breast Cancer,wd=10,4,"rho(reduction, Var_m0)",-0.5238006520726595
+Adult (3k),standard,all,"rho(Var_S, Var_m)",0.9410366961151884
+Adult (3k),standard,0,"rho(Var_S, Var_m)",0.8524443679010218
+Adult (3k),standard,1,"rho(Var_S, Var_m)",0.8361041558448772
+Adult (3k),standard,2,"rho(Var_S, Var_m)",0.76286745240959
+Adult (3k),standard,3,"rho(Var_S, Var_m)",0.7311516976436045
+Adult (3k),standard,4,"rho(Var_S, Var_m)",0.8003655565709904
+Adult (3k),DCT lam=5,all,"rho(reduction, Var_m0)",-0.6074489946054438
+Adult (3k),DCT lam=5,all,mean log reduction,-0.22700317203998566
+Adult (3k),DCT lam=5,0,"rho(reduction, Var_m0)",-0.01798238328439801
+Adult (3k),DCT lam=5,1,"rho(reduction, Var_m0)",-0.05180386612185034
+Adult (3k),DCT lam=5,2,"rho(reduction, Var_m0)",-0.03780910502529174
+Adult (3k),DCT lam=5,3,"rho(reduction, Var_m0)",0.011980199944999846
+Adult (3k),DCT lam=5,4,"rho(reduction, Var_m0)",0.06652262922952563
+Adult (3k),DCT lam=15,all,"rho(reduction, Var_m0)",-0.7736255077361676
+Adult (3k),DCT lam=15,all,mean log reduction,-0.16043028235435486
+Adult (3k),DCT lam=15,0,"rho(reduction, Var_m0)",-0.24815691154697647
+Adult (3k),DCT lam=15,1,"rho(reduction, Var_m0)",-0.16110111416976158
+Adult (3k),DCT lam=15,2,"rho(reduction, Var_m0)",-0.029499748610412803
+Adult (3k),DCT lam=15,3,"rho(reduction, Var_m0)",0.04684746346517629
+Adult (3k),DCT lam=15,4,"rho(reduction, Var_m0)",0.21392048311245307
+Adult (3k),dropout=0.5,all,"rho(reduction, Var_m0)",-0.4188694443188271
+Adult (3k),dropout=0.5,all,mean log reduction,-0.09413401037454605
+Adult (3k),dropout=0.5,0,"rho(reduction, Var_m0)",-0.15354175983822174
+Adult (3k),dropout=0.5,1,"rho(reduction, Var_m0)",-0.09983572176589378
+Adult (3k),dropout=0.5,2,"rho(reduction, Var_m0)",-0.040477612437812324
+Adult (3k),dropout=0.5,3,"rho(reduction, Var_m0)",0.02656768491023586
+Adult (3k),dropout=0.5,4,"rho(reduction, Var_m0)",0.1447417353937094
+Adult (3k),dropout=0.7,all,"rho(reduction, Var_m0)",-0.7569799414422155
+Adult (3k),dropout=0.7,all,mean log reduction,-0.07742755115032196
+Adult (3k),dropout=0.7,0,"rho(reduction, Var_m0)",-0.09077436326212017
+Adult (3k),dropout=0.7,1,"rho(reduction, Var_m0)",-0.09713810316139766
+Adult (3k),dropout=0.7,2,"rho(reduction, Var_m0)",-0.09720943669287968
+Adult (3k),dropout=0.7,3,"rho(reduction, Var_m0)",0.10123894788596635
+Adult (3k),dropout=0.7,4,"rho(reduction, Var_m0)",0.12438956774879929
+Adult (3k),wd=10,all,"rho(reduction, Var_m0)",0.705240695993993
+Adult (3k),wd=10,all,mean log reduction,1.6722790002822876
+Adult (3k),wd=10,0,"rho(reduction, Var_m0)",0.49337664826846733
+Adult (3k),wd=10,1,"rho(reduction, Var_m0)",0.25166697685271344
+Adult (3k),wd=10,2,"rho(reduction, Var_m0)",0.24127439242886783
+Adult (3k),wd=10,3,"rho(reduction, Var_m0)",0.3476166878241328
+Adult (3k),wd=10,4,"rho(reduction, Var_m0)",0.4907040297334159
