@@ -35,13 +35,19 @@ class MLP(nn.Module):
 
 
 def pairwise_prob_mse(logits):
-    probs = [F.softmax(z, dim=1) for z in logits]
-    pairs = [
-        F.mse_loss(probs[i], probs[j])
-        for i in range(len(probs))
-        for j in range(i + 1, len(probs))
-    ]
-    return torch.stack(pairs).mean()
+    if len(logits) < 2:
+        raise RuntimeError("pairwise_prob_mse needs at least two passes")
+    if len(logits) == 2:
+        return F.mse_loss(F.softmax(logits[0], dim=1), F.softmax(logits[1], dim=1))
+    probs = F.softmax(torch.stack(logits), dim=2)
+    if probs.dtype in (torch.float16, torch.bfloat16) and torch.is_autocast_enabled(
+        probs.device.type
+    ):
+        # mse_loss accumulates in float32 under automatic mixed precision.
+        probs = probs.float()
+    # Center first to retain small differences between nearly identical predictions.
+    differences = probs - probs[0]
+    return 2 * differences.var(dim=0, unbiased=True).mean()
 
 
 def dct_loss(model, x, y, n_passes, lam):

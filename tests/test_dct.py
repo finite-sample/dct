@@ -29,6 +29,42 @@ def test_pairwise_mse_is_twice_variance_for_any_n():
         )
 
 
+@pytest.mark.parametrize("passes", [2, 5, 12])
+@pytest.mark.parametrize("scale", [0, 1e-8, 1])
+def test_penalty_and_gradients_match_explicit_pairs(passes, scale):
+    generator = torch.Generator().manual_seed(312)
+    base = torch.randn(7, 3, dtype=torch.float64, generator=generator)
+    logits = [
+        (
+            base + scale * torch.randn(7, 3, dtype=torch.float64, generator=generator)
+        ).requires_grad_()
+        for _ in range(passes)
+    ]
+    probabilities = [F.softmax(z, dim=1) for z in logits]
+    pairs = [
+        F.mse_loss(p, q)
+        for i, p in enumerate(probabilities)
+        for q in probabilities[i + 1 :]
+    ]
+    direct = torch.stack(pairs).mean()
+    fast = pairwise_prob_mse(logits)
+    torch.testing.assert_close(fast, direct, rtol=1e-8, atol=1e-30)
+    for a, b in zip(
+        torch.autograd.grad(fast, logits), torch.autograd.grad(direct, logits)
+    ):
+        torch.testing.assert_close(a, b, rtol=1e-8, atol=1e-20)
+
+
+def test_penalty_retains_autocast_mse_dtype():
+    logits = list(torch.randn(5, 7, 3, dtype=torch.bfloat16).unbind())
+    with torch.autocast("cpu", dtype=torch.bfloat16):
+        probs = [F.softmax(z, dim=1) for z in logits]
+        direct = torch.stack(
+            [F.mse_loss(p, q) for i, p in enumerate(probs) for q in probs[i + 1 :]]
+        ).mean()
+        torch.testing.assert_close(pairwise_prob_mse(logits), direct)
+
+
 def test_linear_dropout_variance_is_weighted_ridge():
     # For logit w'(m * x)/(1-q) with m_j ~ Bernoulli(1-q), the variance over
     # masks is q/(1-q) * sum_j w_j^2 x_j^2: a data-weighted L2 penalty.
